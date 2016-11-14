@@ -1,0 +1,324 @@
+﻿body {
+    background-color: #808000;
+}
+
+.wrap {
+    
+    margin-top: 100px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    height: 3px;
+}
+
+#lblRespuesta {
+    font-size: 30px;    
+}
+
+#TextBox1 /*RUT*/{
+    width: 200px;
+    margin-left: 205px;
+}
+
+#TextBox2 /*NOMBRE*/{
+    width: 200px;
+    margin-left: 170px;
+}
+
+#TextBox3 /*APELLIDO PATERNO*/ {
+    width: 200px;
+    margin-left: 87px;
+}
+
+#TextBox4 /*APELLIDO MATERNO*/{
+    width: 200px;
+    margin-left: 82px;
+}
+
+#TextBox5 /*CORREO*/{
+    width: 200px;
+    margin-left: 176px;
+}
+
+#TextBox6 /*NUMERO*/{
+    width: 200px;
+    margin-left: 56px;
+}
+
+#TextBox7 /*CLAVE*/{
+    width: 200px;
+    margin-left: 189px;
+}
+
+#txtCarrito {
+    width: 200px;
+    margin-left: 50px;
+}
+
+#Button1 {
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: -100px;
+
+}
+
+#Button2 {
+    width: 200px;
+    height: 50px;
+    margin-left: 140px;
+    margin-top: 0px;
+}
+
+#ButtonCarrito {
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+#Label1 {
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+#Label2 {
+    margin-left: 120px;
+    font-size: 30px;
+}
+
+
+#Label3 {
+    margin-left: 90px;
+    font-size: 30px;
+}
+
+
+#Label4 {
+    margin-left: 120px;
+    font-size: 30px;
+}
+
+#Label5 {
+    margin-left: 86px;
+    font-size: 30px;
+}
+
+#Label6 {
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+#Label7 {
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+#Label8 {
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+#Label9 {
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+#Label10 {
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+#form1 {
+    margin: auto;
+    text-align: center;
+}
+
+/*Panel Usuario*/
+#btnEditarCuenta {
+    width: 200px;
+    height: 100px;
+}
+
+#btnProductores {
+    width: 200px;
+    height: 100px;
+}
+
+#btnProductos {
+    width: 200px;
+    height: 100px;
+}
+
+#btnCarrito {
+    width: 200px;
+    height: 100px;
+}
+
+#btnHistorial {
+    width: 200px;
+    height: 100px;
+}
+
+#btnCerrar {
+    width: 200px;
+    height: 100px;
+}
+
+#btnMisProductos {
+    width: 200px;
+    height: 100px;
+}
+
+/*Editar Cuenta*/
+
+#btnModificarFoto {
+    width: 200px;
+    height: 100px;
+}
+
+#btnCambiarCuenta {
+    width: 200px;
+    height: 100px;
+}
+
+#btnCerrarCuenta {
+    width: 200px;
+    height: 100px;
+}
+
+#btnPanelPrincipal {
+    width: 200px;
+    height: 100px;
+}
+
+#btnModificarContrasenia {
+    width: 200px;
+    height: 100px;
+}
+
+#btnModificarDatos {
+    width: 200px;
+    height: 100px;
+}
+
+section {
+    width: 300px;
+    height: 400px;
+    margin-left: 300px;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+}
+
+#btnCambiarFoto {
+    width: 200px;
+    height: 100px;
+    margin-left: 300px;
+}
+
+#btnVolver {
+    width: 200px;
+    height: 100px;
+}
+
+/*Cambiar De Cuenta*/
+#txtPara {
+    width: 702px;
+    margin-left: 47px;
+}
+
+#txtCC {
+    width: 702px;
+    margin-left: 54px;
+    margin-top: 10px;
+}
+
+#txtAsunto {
+    width: 702px;
+    margin-left: 29px;
+    margin-top: 10px;
+}
+
+#txtComentario {
+    width: 700px;
+    margin-top: 10px;
+}
+
+#cbxTerminos {
+    margin-top: 20px;
+}
+
+/*Cerrar Cuenta*/
+#btnAceptar {
+    width: 350px;
+    height: 50px;
+}
+
+#btnCancelar {
+    width: 350px;
+    height: 50px;
+}
+
+#btnVolverC {
+    width: 350px;
+    height: 50px;
+}
+
+#txtIngrese {
+    width: 300px;
+    margin-left: 10px;
+}
+
+/*Modificar Datos Personales*/
+#txtRut {
+    width: 250px;
+    margin-left: 177px;
+}
+
+#txtNombre {
+    width: 250px;
+    margin-left: 145px;
+    margin-top: 10px;
+}
+
+#txtApellidoP {
+    width: 250px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+#txtApellidoM {
+    width: 250px;
+    margin-left: 55px;
+    margin-top: 10px;
+}
+
+#txtCorreo {
+    width: 250px;
+    margin-left: 148px;
+    margin-top: 10px;
+}
+
+#txtNumero {
+    width: 250px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#txtCambio {
+    width: 250px;
+}
+
+/*Carrito De Compras*/
+#txtCCarrito {
+    width: 250px;
+}
+
+#btnComprar {
+    margin-left: 30px;
+}

@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="PORTAFOLIO" EntityNamespace="PORTAFOLIOContext" ContextNamespace="PORTAFOLIOContext" Class="PORTAFOLIODataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="89448ecc-4b46-497f-82f8-24d0c308e1f4" Provider="Devart.Data.Oracle.Linq.Provider.OracleDataProvider, Devart.Data.Oracle.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=portafolio;Password=oracle;Server=localhost;Home=oraclient12home1_32bit;Persist Security Info=True" Provider="Devart.Data.Oracle" />
+  <Table Name="PORTAFOLIO.APEX$_WS_TAGS" Member="APEXWSTAGs">
+    <Type Name="APEXWSTAG" ed:Guid="ecbf389a-2f3c-447f-8f55-8ff2589240b9">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="5ec1716c-7a2e-42fe-8927-e5aff7d6b3d9" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5caf84d7-48d6-4a47-a14d-ef92472d96ba" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4e22a907-7132-4f28-bd60-a423cf009cb4" />
+      <Column Name="ROW_ID" Member="ROWID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fbe80b53-75a4-402f-9f8a-aaf438ab574e" />
+      <Column Name="WEBPAGE_ID" Member="WEBPAGEID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6ff629f5-dcab-4c3c-8bc7-62cc6f5af3c6" />
+      <Column Name="COMPONENT_LEVEL" Member="COMPONENTLEVEL" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="c132d9b3-e0ef-42d7-8761-6a8c0cf7b37d" />
+      <Column Name="TAG" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="e6d28a95-636f-4d35-9664-3bf3fc292230" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="e2e51b55-be1a-48be-9d94-1c50e3455b84" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="1e90a99e-fcdf-49fb-b428-d885f797007d" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="48f90e22-b63a-4287-9b6d-9afd7fca13d0" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="6fd4e3a5-7448-4f2e-b100-edc1f463609e" />
+      <Association Name="APEXWSROW_APEXWSTAG" ed:AssociationGuid="2f8e59a3-6d54-4b5f-a9ef-90062cff79bc" Member="APEXWSROW" ed:Guid="5ffaae7b-ecd3-421b-9e3b-337ac55fa027" ThisKey="ROWID" OtherKey="ID" Type="APEXWSROW" DeleteRule="CASCADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_FILES" Member="APEXWSFILEs">
+    <Type Name="APEXWSFILE" ed:Guid="103017dc-9bb1-4613-a286-c8897780fd5a">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="fbd90a44-e4cc-4f5c-abb0-6893af784b12" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="07f513fc-f020-4e7a-b56a-b8b4caee6a5b" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="c2296db8-5857-4040-ab61-da1e8e5233ba" />
+      <Column Name="ROW_ID" Member="ROWID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fbd8b281-4ba6-40b4-9480-c6614c9286a7" />
+      <Column Name="WEBPAGE_ID" Member="WEBPAGEID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6f974f0c-46df-4f14-9f1c-17c8a226958d" />
+      <Column Name="COMPONENT_LEVEL" Member="COMPONENTLEVEL" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="53ce3587-c25f-4a62-ad97-defd094bb777" />
+      <Column Name="NAME" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="b01b82b9-ff88-4227-a0c4-2d808f74604a" />
+      <Column Name="IMAGE_ALIAS" Member="IMAGEALIAS" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="78df32a1-b9e0-4d30-8508-94eae7e2d6a3" />
+      <Column Name="IMAGE_ATTRIBUTES" Member="IMAGEATTRIBUTES" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="41538744-a96d-411c-94b2-f18c6c6c205d" />
+      <Column Name="CONTENT" Type="System.Byte[]" DbType="BLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7aeba991-823b-40d2-8a95-8bede2588f74" />
+      <Column Name="CONTENT_LAST_UPDATE" Member="CONTENTLASTUPDATE" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="1f909a60-050f-4aeb-a5ed-5d3a60fb1d28" />
+      <Column Name="MIME_TYPE" Member="MIMETYPE" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="e29c9d9e-5ca0-48d7-b4d6-8cdb631b4ded" />
+      <Column Name="CONTENT_CHARSET" Member="CONTENTCHARSET" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="86ca6053-32a9-4ff6-b1ce-3271d61c27a4" />
+      <Column Name="CONTENT_FILENAME" Member="CONTENTFILENAME" Type="System.String" DbType="VARCHAR2(500 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="500" ed:ValidateMaxLength="500" ed:ValidateRequired="false" ed:Guid="30c6bc56-3507-4047-818c-b68bb1cd01dc" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="467bdd97-7dac-4eac-a962-a741bca6dec2" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="1533f9da-def8-497b-8484-be021a07fe82" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="d09644b7-67e0-48c6-b242-6d4cda4e8128" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="e8580c33-a43a-4c39-9d10-bbc00ece1125" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="148b60e3-cb74-49ea-9ae6-170cdb689714" />
+      <Association Name="APEXWSROW_APEXWSFILE" ed:AssociationGuid="9ea74f9e-16ee-4431-9f48-b9c1def1fa14" Member="APEXWSROW" ed:Guid="9eca1b78-e484-4807-9e3e-d647378709c5" ThisKey="ROWID" OtherKey="ID" Type="APEXWSROW" DeleteRule="CASCADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_WEBPG_SECTION_HISTORY" Member="APEXWSWEBPGSECTIONHISTORIES">
+    <Type Name="APEXWSWEBPGSECTIONHISTORY" ed:Guid="7f13bbeb-b6cd-456d-9582-8ab305c8c13e">
+      <Column Name="SECTION_ID" Member="SECTIONID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7835a635-3b1c-4b25-9be8-65047ae381af" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="725127f6-f4b1-4585-907e-923880e896d6" />
+      <Column Name="WEBPAGE_ID" Member="WEBPAGEID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4d73e1c6-7145-4d49-8ea6-32131a449514" />
+      <Column Name="OLD_DISPLAY_SEQUENCE" Member="OLDDISPLAYSEQUENCE" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="99139352-7664-4279-9e8b-b3d8c20454a1" />
+      <Column Name="NEW_DISPLAY_SEQUENCE" Member="NEWDISPLAYSEQUENCE" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="86e37ae5-c127-42d9-b8fe-038822b30fc6" />
+      <Column Name="OLD_TITLE" Member="OLDTITLE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="69ce7139-653f-4d1e-bc99-9c335a96ad10" />
+      <Column Name="NEW_TITLE" Member="NEWTITLE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="8ff3bf2d-fcc6-49cc-8748-2e87ac8a35ee" />
+      <Column Name="OLD_CONTENT" Member="OLDCONTENT" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="96fbc4e1-7b95-4dc3-ac86-b7ab5f8ef45e" />
+      <Column Name="NEW_CONTENT" Member="NEWCONTENT" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="1bd14866-2415-4067-8e9a-5a62bce47e9f" />
+      <Column Name="APPLICATION_USER_ID" Member="APPLICATIONUSERID" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="04d99d33-16d5-4957-adaa-38b98d72173e" />
+      <Column Name="CHANGE_DATE" Member="CHANGEDATE" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="60e8dffc-a940-44e8-87fc-e103dc6814ee" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.COMUNA" Member="COMUNAs">
+    <Type Name="COMUNA" Id="ID1" ed:Guid="a9e7b6e1-85de-4957-9627-f92a39a11583">
+      <Column Name="IDCOMUNA" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="90ee5ef8-7f7c-4b19-b7e1-ea7358380597" />
+      <Column Name="NOMBRECOMUNA" Type="System.String" DbType="VARCHAR2(250 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="250" ed:ValidateMaxLength="250" ed:ValidateRequired="true" ed:Guid="b28c0411-1c1a-4e14-830a-92d8c73b5886" />
+      <Column Name="PROVINCIA_IDPROVINCIA" Member="PROVINCIAIDPROVINCIA" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="7fd4128e-fd12-4c73-ac8f-9ed3fae6c6e9" />
+      <Association Name="PROVINCIA_COMUNA" ed:AssociationGuid="177f10ea-1fb8-47f6-8a0e-dacc6b537437" Member="PROVINCIA" ed:Guid="6ff91635-03a4-482d-a4a3-b7106cc11192" ThisKey="PROVINCIAIDPROVINCIA" OtherKey="IDPROVINCIA" Type="PROVINCIA" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="COMUNA_UBICACION" ed:AssociationGuid="c18ea37f-55ab-474a-8b64-6ce70ed5ea77" Member="UBICACIONs" ed:Guid="6ba6185c-3cf3-49eb-b812-2eb95db8f966" ThisKey="IDCOMUNA" OtherKey="COMUNAIDCOMUNA" Type="UBICACION" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DOCUMENTO" Member="DOCUMENTOs">
+    <Type Name="DOCUMENTO" ed:Guid="8e28b257-2ba7-41f5-8ce3-bd064aa188af">
+      <Column Name="IDDOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="6b3b3410-3665-469e-b1d9-3fae4ac19d8c" />
+      <Column Name="VALORTOTALDOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="61d8d624-473d-4fe3-a38b-e3d5b70cb33a" />
+      <Column Name="FECHADOCUMENTO" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="d0c64ba3-2d8e-4c8c-af84-b944cb77a797" />
+      <Column Name="TIPOODOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="0186dd86-3da5-41e1-9438-aaa34c565c4e" />
+      <Column Name="USUARIO_IDUSUARIO" Member="USUARIOIDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="0f4847ea-4a50-4bee-9ba9-9169786abbc3" />
+      <Column Name="ESTADODOCUMENTO" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="true" ed:Guid="adff7367-2569-48d2-8dae-074c45117bcc" />
+      <Association Name="USUARIO_DOCUMENTO" ed:AssociationGuid="fedc1218-ac16-4041-99d4-193e521617dc" Member="USUARIO" ed:Guid="0e6591f9-0d4b-4f22-9d3a-217ee057fdd5" ThisKey="USUARIOIDUSUARIO" OtherKey="IDUSUARIO" Type="USUARIO" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="DOCUMENTO_DETALLEDOC" ed:AssociationGuid="79e8a8f1-2dae-44e6-8df3-38efdf160a98" Member="DETALLEDOCs" ed:Guid="f1dd9b27-c741-4783-82e9-833dc8def577" ThisKey="IDDOCUMENTO" OtherKey="DOCUMENTOIDDOCUMENTO" Type="DETALLEDOC" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.PRODUCTO" Member="PRODUCTOs">
+    <Type Name="PRODUCTO" ed:Guid="eccdc86d-2d6d-4653-882b-7d797cb71ae9">
+      <Column Name="IDPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="e76a2d52-9232-42a0-968b-d7f9482cf3ce" />
+      <Column Name="NOMBREPRODUCTO" Type="System.String" DbType="VARCHAR2(50 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="d6fd399a-d192-4d09-8228-c3542fc5c91f" />
+      <Column Name="DESCRIPCIONPRODUCTO" Type="System.String" DbType="VARCHAR2(250 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="250" ed:ValidateMaxLength="250" ed:ValidateRequired="false" ed:Guid="74851925-73e2-4914-94ef-7af944bdb7c0" />
+      <Column Name="VALORPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="218287f5-d675-4e1d-9813-9f65a8f8592c" />
+      <Column Name="ESTADOPRODUCTO" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="true" ed:Guid="7dbf501e-d295-41ad-b890-bf57ee1d6a26" />
+      <Column Name="FOTOPRODUCTO" Type="System.Byte[]" DbType="BLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="33895218-6110-4f04-b69d-252e53b08dee" />
+      <Association Name="PRODUCTO_DETALLEDOC" ed:AssociationGuid="eeab5b6e-cc58-457c-8a1a-96b84d0b27c8" Member="DETALLEDOCs" ed:Guid="a5904dcd-c228-468d-bd93-1d7bc079b2f3" ThisKey="IDPRODUCTO" OtherKey="PRODUCTOIDPRODUCTO" Type="DETALLEDOC" />
+      <Association Name="PRODUCTO_PRODUCTOPRODUCTOR" ed:AssociationGuid="19a75001-5dda-4e5b-aaec-f21708297038" Member="PRODUCTOPRODUCTORs" ed:Guid="6c247cd1-0234-4d18-a3a5-d9a8cc6cc923" ThisKey="IDPRODUCTO" OtherKey="PRODUCTOIDPRODUCTO" Type="PRODUCTOPRODUCTOR" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.PROVINCIA" Member="PROVINCIAs">
+    <Type Name="PROVINCIA" Id="ID2" ed:Guid="8eb2e745-3e58-451a-8fd2-62173e070938">
+      <Column Name="IDPROVINCIA" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="c5e721b5-01e0-47a1-9934-eff180f41072" />
+      <Column Name="NOMBREPROVINCIA" Type="System.String" DbType="VARCHAR2(250 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="250" ed:ValidateMaxLength="250" ed:ValidateRequired="true" ed:Guid="7438646c-1684-42ee-8a5b-d734bb73dd8c" />
+      <Column Name="REGION_IDREGION" Member="REGIONIDREGION" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="ce5d8327-45b5-4851-bdb9-1e4baad326f3" />
+      <Association Name="PROVINCIA_COMUNA" ed:AssociationGuid="177f10ea-1fb8-47f6-8a0e-dacc6b537437" Member="COMUNAs" ed:Guid="0428c9c5-788e-4dcd-be02-86c1961a7588" ThisKey="IDPROVINCIA" OtherKey="PROVINCIAIDPROVINCIA" Type="COMUNA" />
+      <Association Name="REGION_PROVINCIA" ed:AssociationGuid="e0d58fc1-f0c0-43d6-989b-f4edcbf2f13e" Member="REGION" ed:Guid="77afb82a-4faf-4c85-b81a-c1568465d61b" ThisKey="REGIONIDREGION" OtherKey="IDREGION" Type="REGION" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.REGION" Member="REGIONs">
+    <Type Name="REGION" Id="ID3" ed:Guid="ec4f299f-b0cd-4a94-b99e-44710cd4709c">
+      <Column Name="IDREGION" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="89bb3732-a584-41c9-b0bd-1a72520091ec" />
+      <Column Name="NOMBREREGION" Type="System.String" DbType="VARCHAR2(250 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="250" ed:ValidateMaxLength="250" ed:ValidateRequired="true" ed:Guid="6d451c00-8569-40c0-9402-0ffb13dd4499" />
+      <Association Name="REGION_PROVINCIA" ed:AssociationGuid="e0d58fc1-f0c0-43d6-989b-f4edcbf2f13e" Member="PROVINCIAs" ed:Guid="2f64392f-7081-4507-ae65-7f33d23b6c09" ThisKey="IDREGION" OtherKey="REGIONIDREGION" Type="PROVINCIA" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.UBICACION" Member="UBICACIONs">
+    <Type Name="UBICACION" Id="ID4" ed:Guid="7c62ef8a-73eb-4d52-9749-0b8723d488de">
+      <Column Name="IDUBICACION" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="2133c72d-1635-4b6e-830f-e1a76516dbad" />
+      <Column Name="NOMBREUBICACION" Type="System.String" DbType="VARCHAR2(25 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="25" ed:ValidateMaxLength="25" ed:ValidateRequired="true" ed:Guid="260b706b-eec7-4ff8-b70c-439e7686c792" />
+      <Column Name="DESCRIPCIONUBICACION" Type="System.String" DbType="VARCHAR2(250 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="250" ed:ValidateMaxLength="250" ed:ValidateRequired="false" ed:Guid="30df25af-5b73-478f-b829-a11ab0be9f24" />
+      <Column Name="DIRECCIONUBICACION" Type="System.String" DbType="VARCHAR2(250 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="250" ed:ValidateMaxLength="250" ed:ValidateRequired="false" ed:Guid="bd802c56-b5f5-4a1d-8837-7efbe61301b1" />
+      <Column Name="ESTADOUBICACION" Type="System.String" DbType="CHAR(1) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="ed051f0c-e4c4-4aa4-9874-3fd349dab2d1" />
+      <Column Name="USUARIO_IDUSUARIO" Member="USUARIOIDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="9e62b392-350a-4721-9df4-ccd88a9b2e13" />
+      <Column Name="COMUNA_IDCOMUNA" Member="COMUNAIDCOMUNA" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="3f535b9a-0bc5-4285-8799-ac20ce7b6a66" />
+      <Association Name="COMUNA_UBICACION" ed:AssociationGuid="c18ea37f-55ab-474a-8b64-6ce70ed5ea77" Member="COMUNA" ed:Guid="28da5339-ff75-4e98-ab33-6744c6da19b9" ThisKey="COMUNAIDCOMUNA" OtherKey="IDCOMUNA" Type="COMUNA" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="USUARIO_UBICACION" ed:AssociationGuid="aec8bba8-878d-4df5-b851-976aa7f97dd9" Member="USUARIO" ed:Guid="29dc7e98-782b-4d6e-a66e-314ca267f474" ThisKey="USUARIOIDUSUARIO" OtherKey="IDUSUARIO" Type="USUARIO" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.USUARIO" Member="USUARIOs">
+    <Type Name="USUARIO" ed:Guid="992f8c20-82b3-45a6-bb6e-b418ee55b956">
+      <Column Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="a42b06e0-2534-4c27-b5fb-0cf7921b9f9d" />
+      <Column Name="RUTUSUARIO" Type="System.String" DbType="VARCHAR2(15 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="15" ed:ValidateMaxLength="15" ed:ValidateRequired="true" ed:Guid="a49dbdaf-2665-4db9-b806-6ae47d836c31" />
+      <Column Name="NOMBREUSUARIO" Type="System.String" DbType="VARCHAR2(50 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="8b27ab9f-79f8-4bac-8d0a-c05c52429e71" />
+      <Column Name="APELLIDOPATERNOUSUARIO" Type="System.String" DbType="VARCHAR2(50 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="a15c3da2-c412-475c-be0b-e58232210803" />
+      <Column Name="APELLIDOMATERNOUSUARIO" Type="System.String" DbType="VARCHAR2(50 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="b6fe13bf-b7b7-4158-b836-5050198d0a5a" />
+      <Column Name="CORREOUSUARIO" Type="System.String" DbType="VARCHAR2(150 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="150" ed:ValidateMaxLength="150" ed:ValidateRequired="true" ed:Guid="f3b71985-6886-4846-befe-bee86f3fc089" />
+      <Column Name="TELEFONOUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="733f2c9b-f145-495e-91e3-aab27da64391" />
+      <Column Name="DESCRIPCIONUSUARIO" Type="System.String" DbType="VARCHAR2(450 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="450" ed:ValidateMaxLength="450" ed:ValidateRequired="false" ed:Guid="80983826-b725-4ef5-8f92-6a38df99acf8" />
+      <Column Name="CLAVEUSUARIO" Type="System.String" DbType="VARCHAR2(25 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="25" ed:ValidateMaxLength="25" ed:ValidateRequired="true" ed:Guid="bc626418-2776-43ee-95ca-fcd48854f263" />
+      <Column Name="TIPOUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="4c929f5e-15e0-47de-b7f2-9513e6c5acf5" />
+      <Column Name="ESTADOUSUARIO" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="true" ed:Guid="f49a4353-c3db-480e-88fe-7ab5079f5650" />
+      <Column Name="FOTOUSUARIO" Type="System.Byte[]" DbType="BLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="b1d18a4c-f6df-464e-afdd-2f6e5f4bd7b8" />
+      <Association Name="USUARIO_DOCUMENTO" ed:AssociationGuid="fedc1218-ac16-4041-99d4-193e521617dc" Member="DOCUMENTOs" ed:Guid="e71aa0cd-f5a0-4606-83f6-04cc705d0ad4" ThisKey="IDUSUARIO" OtherKey="USUARIOIDUSUARIO" Type="DOCUMENTO" />
+      <Association Name="USUARIO_UBICACION" ed:AssociationGuid="aec8bba8-878d-4df5-b851-976aa7f97dd9" Member="UBICACIONs" ed:Guid="f2a7507c-f757-4a44-9719-9c1000d20730" ThisKey="IDUSUARIO" OtherKey="USUARIOIDUSUARIO" Type="UBICACION" />
+      <Association Name="USUARIO_DETALLEDOC" ed:AssociationGuid="19d0a709-05f3-4bc1-9b52-04fa56bfc593" Member="DETALLEDOCs" ed:Guid="6320cc21-0759-4229-a387-343585bc169c" ThisKey="IDUSUARIO" OtherKey="USUARIOIDUSUARIO" Type="DETALLEDOC" />
+      <Association Name="USUARIO_PRODUCTOPRODUCTOR" ed:AssociationGuid="e57b430c-911c-4ba3-b311-914a82b01b48" Member="PRODUCTOPRODUCTORs" ed:Guid="875896ee-a2dd-40f6-9590-839caad124aa" ThisKey="IDUSUARIO" OtherKey="USUARIOIDUSUARIO" Type="PRODUCTOPRODUCTOR" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DETALLEDOC" Member="DETALLEDOCs">
+    <Type Name="DETALLEDOC" Id="ID5" ed:Guid="bff2c60f-29c3-44eb-9b01-ddeab2a8e509">
+      <Column Name="IDDETALLEDOC" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="079582e1-5ca5-4767-8402-6c10edd9cb87" />
+      <Column Name="CANTIDADPEDIDODETALLEDOC" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="6ff17fcc-56c5-4fb4-9b69-bd745f0d2ead" />
+      <Column Name="VALORPRODDETALLEDOC" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="49e2bb0a-38d9-4f64-9f90-4e78dd55b60a" />
+      <Column Name="SUBTOTALPRODUCTODETALLEDOC" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="24b7203f-db31-495e-9c7f-4980d9cf0c7a" />
+      <Column Name="DOCUMENTO_IDDOCUMENTO" Member="DOCUMENTOIDDOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="6a71700f-37e5-489d-9b7c-21821091e63a" />
+      <Column Name="PRODUCTO_IDPRODUCTO" Member="PRODUCTOIDPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="232b3ffd-da15-494a-b41e-105c43b175da" />
+      <Column Name="USUARIO_IDUSUARIO" Member="USUARIOIDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="9b8f4d9b-b14f-4cd0-9e52-ff10c4e3d99d" />
+      <Association Name="DOCUMENTO_DETALLEDOC" ed:AssociationGuid="79e8a8f1-2dae-44e6-8df3-38efdf160a98" Member="DOCUMENTO" ed:Guid="5f240f00-4944-424c-ac15-b845eb0d1c93" ThisKey="DOCUMENTOIDDOCUMENTO" OtherKey="IDDOCUMENTO" Type="DOCUMENTO" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="PRODUCTO_DETALLEDOC" ed:AssociationGuid="eeab5b6e-cc58-457c-8a1a-96b84d0b27c8" Member="PRODUCTO" ed:Guid="83fc0f88-f42c-48f6-a4c8-f36cc807dd89" ThisKey="PRODUCTOIDPRODUCTO" OtherKey="IDPRODUCTO" Type="PRODUCTO" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="USUARIO_DETALLEDOC" ed:AssociationGuid="19d0a709-05f3-4bc1-9b52-04fa56bfc593" Member="USUARIO" ed:Guid="8b90f181-f30c-42f8-a9df-d61b853f1a93" ThisKey="USUARIOIDUSUARIO" OtherKey="IDUSUARIO" Type="USUARIO" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.PRODUCTOPRODUCTOR" Member="PRODUCTOPRODUCTORs">
+    <Type Name="PRODUCTOPRODUCTOR" Id="ID6" ed:Guid="cf68ff1e-463d-4dbc-9cb4-6e2def20f7ee">
+      <Column Name="IDPRODUCTOPRODUCTOR" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Scale="0" ed:ValidateRequired="true" ed:Guid="97642bb2-4484-4628-bfa8-bd67a0a5f326" />
+      <Column Name="STOCKPRODUCTOPRODUCTOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="1fe87fc4-1510-41fe-90f2-7dec4e6359bf" />
+      <Column Name="ESTADOPRODUCTOPRODUCTOR" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="true" ed:Guid="515f8a65-5ff2-459a-9d28-e201f0059d7a" />
+      <Column Name="USUARIO_IDUSUARIO" Member="USUARIOIDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="9b03fa0b-16b8-4236-871f-1726e2536088" />
+      <Column Name="PRODUCTO_IDPRODUCTO" Member="PRODUCTOIDPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" Scale="0" ed:ValidateRequired="true" ed:Guid="be7e4273-8b82-4a49-b9e6-1bfe5f1e4a7d" />
+      <Association Name="PRODUCTO_PRODUCTOPRODUCTOR" ed:AssociationGuid="19a75001-5dda-4e5b-aaec-f21708297038" Member="PRODUCTO" ed:Guid="ddf8caf9-eb97-4802-8ab0-36fa19d65ea1" ThisKey="PRODUCTOIDPRODUCTO" OtherKey="IDPRODUCTO" Type="PRODUCTO" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="USUARIO_PRODUCTOPRODUCTOR" ed:AssociationGuid="e57b430c-911c-4ba3-b311-914a82b01b48" Member="USUARIO" ed:Guid="d0b4e286-1460-4faa-a362-a820ac4c8a47" ThisKey="USUARIOIDUSUARIO" OtherKey="IDUSUARIO" Type="USUARIO" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEPT" Member="DEPTs">
+    <Type Name="DEPT" ed:Guid="e38d7c16-7416-473b-919e-0ac1362e85e7">
+      <Column Name="DEPTNO" Type="System.Int32" DbType="NUMBER(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="2" ed:ValidateRequired="true" ed:Guid="26512534-7a31-45d4-a181-e1dbfdb842b3" />
+      <Column Name="DNAME" Type="System.String" DbType="VARCHAR2(14 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="14" ed:ValidateMaxLength="14" ed:ValidateRequired="false" ed:Guid="bc0a2b02-6a22-4b58-bb5c-c0afa9b33733" />
+      <Column Name="LOC" Type="System.String" DbType="VARCHAR2(13 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="13" ed:ValidateMaxLength="13" ed:ValidateRequired="false" ed:Guid="abbb767a-fda1-4c78-b85f-83a4a63104c4" />
+      <Association Name="DEPT_EMP" ed:AssociationGuid="2a80cd20-f799-4baf-a1ab-9ee15b04ae89" Member="EMPs" ed:Guid="3589b88c-e41a-4d70-87b2-2dcef26ec0a6" ThisKey="DEPTNO" OtherKey="DEPTNO" Type="EMP" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.EMP" Member="EMPs">
+    <Type Name="EMP" ed:Guid="5e485104-dc09-44f5-aefe-aa4e16b65a28">
+      <Column Name="EMPNO" Type="System.Int32" DbType="NUMBER(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="4" ed:ValidateRequired="true" ed:Guid="ff7d291e-8333-46ab-b814-c3cf24c8a419" />
+      <Column Name="ENAME" Type="System.String" DbType="VARCHAR2(10 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="10" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="9cdeda30-db6c-44c6-95b6-f19c64581425" />
+      <Column Name="JOB" Type="System.String" DbType="VARCHAR2(9 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="9" ed:ValidateMaxLength="9" ed:ValidateRequired="false" ed:Guid="88dd57bc-1cf4-4ca1-9bbf-3b72789820bb" />
+      <Column Name="MGR" Type="System.Int32" DbType="NUMBER(4) NULL" CanBeNull="true" UpdateCheck="Never" Precision="4" ed:ValidateRequired="false" ed:Guid="15f66da3-b35f-44f9-a940-0ee77fc53afa" />
+      <Column Name="HIREDATE" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="c8aad398-c88e-4675-aeb5-9fe36e5f1517" />
+      <Column Name="SAL" Type="System.Double" DbType="NUMBER(7,2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="7" Scale="2" ed:ValidateRequired="false" ed:Guid="4c600205-d556-4140-968c-0cee38776380" />
+      <Column Name="COMM" Type="System.Double" DbType="NUMBER(7,2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="7" Scale="2" ed:ValidateRequired="false" ed:Guid="07acf6c8-f6eb-4606-8324-779261d60b20" />
+      <Column Name="DEPTNO" Type="System.Int32" DbType="NUMBER(2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="2" ed:ValidateRequired="false" ed:Guid="5ede39f2-1c8f-4c5c-b9a1-fb89e20baac0" />
+      <Association Name="DEPT_EMP" ed:AssociationGuid="2a80cd20-f799-4baf-a1ab-9ee15b04ae89" Member="DEPT" ed:Guid="60bc43f8-d4e9-427f-969d-a46243a353f9" ThisKey="DEPTNO" OtherKey="DEPTNO" Type="DEPT" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="EMP_EMP" ed:AssociationGuid="83c2da00-9d49-41ef-9f51-fcbbdd4e6e26" Member="EMPs_MGR" ed:Guid="3b50fa75-7815-4484-a6a2-403f48161623" ThisKey="EMPNO" OtherKey="MGR" Type="EMP" />
+      <Association Name="EMP_EMP" ed:AssociationGuid="83c2da00-9d49-41ef-9f51-fcbbdd4e6e26" Member="EMP_MGR" ed:Guid="96ab6d9b-eba3-46b8-a1b6-fbb3d2b23823" ThisKey="MGR" OtherKey="EMPNO" Type="EMP" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEMO_USERS" Member="DEMOUSERs">
+    <Type Name="DEMOUSER" ed:Guid="eee8cb36-068e-440b-9b5b-c4a8add4a273">
+      <Column Name="USER_ID" Member="USERID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="a329edda-1979-45e1-9fba-d227ac9d8fe5" />
+      <Column Name="USER_NAME" Member="USERNAME" Type="System.String" DbType="VARCHAR2(100 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="false" ed:Guid="27fbf8e6-772b-484f-be4a-9aad4ea5da1d" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f09fd9e1-e9a5-4ffe-8e09-9ae091579cdb" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="de514d00-55e3-476e-9a43-7bec329b8a37" />
+      <Column Name="QUOTA" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="714e0615-e36a-497a-8397-0accd452ae1f" />
+      <Column Name="PRODUCTS" Type="System.String" DbType="CHAR(1) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="2004ffb1-7a5e-476b-9278-1e0acf984672" />
+      <Column Name="EXPIRES_ON" Member="EXPIRESON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="b3a9b94f-591a-48c2-a1fa-d76d0755c302" />
+      <Column Name="ADMIN_USER" Member="ADMINUSER" Type="System.String" DbType="CHAR(1) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="aed2f08f-e946-495c-9d6e-b021c4df1a69" />
+      <Association Name="DEMOUSER_DEMOORDER" ed:AssociationGuid="0efa7a7e-b641-4496-8051-3b549ef18afd" Member="DEMOORDERs" ed:Guid="8389e2bf-2cee-465c-94bf-cf87d43e8fdd" ThisKey="USERID" OtherKey="USERID" Type="DEMOORDER" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEMO_CUSTOMERS" Member="DEMOCUSTOMERs">
+    <Type Name="DEMOCUSTOMER" ed:Guid="fd0d8fd4-a292-422b-a7d0-5698b61968a3">
+      <Column Name="CUSTOMER_ID" Member="CUSTOMERID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="03875b12-5534-4e38-95d8-b3f447737ffa" />
+      <Column Name="CUST_FIRST_NAME" Member="CUSTFIRSTNAME" Type="System.String" DbType="VARCHAR2(20 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="f16d46ab-2c31-4533-85e5-59b363a658b5" />
+      <Column Name="CUST_LAST_NAME" Member="CUSTLASTNAME" Type="System.String" DbType="VARCHAR2(20 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="28667368-3a0e-487c-b237-ebff6573a47f" />
+      <Column Name="CUST_STREET_ADDRESS1" Member="CUSTSTREETADDRESS1" Type="System.String" DbType="VARCHAR2(60 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="60" ed:ValidateMaxLength="60" ed:ValidateRequired="false" ed:Guid="889e2dde-925d-4baf-9b4c-fcc490391523" />
+      <Column Name="CUST_STREET_ADDRESS2" Member="CUSTSTREETADDRESS2" Type="System.String" DbType="VARCHAR2(60 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="60" ed:ValidateMaxLength="60" ed:ValidateRequired="false" ed:Guid="84949761-48a9-4b9a-ac05-ed7d52e8d28e" />
+      <Column Name="CUST_CITY" Member="CUSTCITY" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="c3c983ec-79f6-4a2f-a939-7ec3c12b14ac" />
+      <Column Name="CUST_STATE" Member="CUSTSTATE" Type="System.String" DbType="VARCHAR2(2 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="2" ed:ValidateMaxLength="2" ed:ValidateRequired="false" ed:Guid="6563b7c0-4a80-470b-8901-cecbebec4d9b" />
+      <Column Name="CUST_POSTAL_CODE" Member="CUSTPOSTALCODE" Type="System.String" DbType="VARCHAR2(10 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="10" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="b3711bb0-b369-48fa-9b3d-3173aa9d4d5f" />
+      <Column Name="PHONE_NUMBER1" Member="PHONENUMBER1" Type="System.String" DbType="VARCHAR2(25 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="25" ed:ValidateMaxLength="25" ed:ValidateRequired="false" ed:Guid="665bdb29-71ce-4081-9b99-2c6c3f9b6b55" />
+      <Column Name="PHONE_NUMBER2" Member="PHONENUMBER2" Type="System.String" DbType="VARCHAR2(25 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="25" ed:ValidateMaxLength="25" ed:ValidateRequired="false" ed:Guid="76c011d9-9c91-4d3f-8ca2-cd882b8a2569" />
+      <Column Name="CREDIT_LIMIT" Member="CREDITLIMIT" Type="System.Double" DbType="NUMBER(9,2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="9" Scale="2" ed:ValidateRequired="false" ed:Guid="9122f18c-e74c-4e86-9c2f-9e7a0e5d5d7f" />
+      <Column Name="CUST_EMAIL" Member="CUSTEMAIL" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="8af7f958-2077-447a-b3c9-445ef0e32201" />
+      <Association Name="DEMOCUSTOMER_DEMOORDER" ed:AssociationGuid="2e5ebf27-4fca-4b0a-81ea-ef690f87853d" Member="DEMOORDERs" ed:Guid="4723a7da-a568-4e57-b38e-f4d3e95d6ed0" ThisKey="CUSTOMERID" OtherKey="CUSTOMERID" Type="DEMOORDER" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEMO_ORDERS" Member="DEMOORDERs">
+    <Type Name="DEMOORDER" ed:Guid="8c34d8ae-dfbd-4938-9501-7c1d4cca71d8">
+      <Column Name="ORDER_ID" Member="ORDERID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="9f345e59-fe37-4554-9ca8-0b87b9c75c34" />
+      <Column Name="CUSTOMER_ID" Member="CUSTOMERID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="800f635d-5ca3-4534-9e19-0569d1575cc6" />
+      <Column Name="ORDER_TOTAL" Member="ORDERTOTAL" Type="System.Double" DbType="NUMBER(8,2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="8" Scale="2" ed:ValidateRequired="false" ed:Guid="0fd4fad1-29b2-4dcc-8b82-ca41b7a2a992" />
+      <Column Name="ORDER_TIMESTAMP" Member="ORDERTIMESTAMP" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="6714c943-eb43-4b58-b311-121202b8422a" />
+      <Column Name="USER_ID" Member="USERID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e5aff35f-a760-4e92-b4a8-8cea92438d79" />
+      <Association Name="DEMOUSER_DEMOORDER" ed:AssociationGuid="0efa7a7e-b641-4496-8051-3b549ef18afd" Member="DEMOUSER" ed:Guid="3b91ef4b-d2ef-42e3-b620-a8f4b572ba53" ThisKey="USERID" OtherKey="USERID" Type="DEMOUSER" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="DEMOCUSTOMER_DEMOORDER" ed:AssociationGuid="2e5ebf27-4fca-4b0a-81ea-ef690f87853d" Member="DEMOCUSTOMER" ed:Guid="927cd2c2-b44a-4faa-8bcb-d0a76cdfd7e0" ThisKey="CUSTOMERID" OtherKey="CUSTOMERID" Type="DEMOCUSTOMER" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="DEMOORDER_DEMOORDERITEM" ed:AssociationGuid="4ad4aea3-ee0f-4e93-9c38-1d5c003b8758" Member="DEMOORDERITEMs" ed:Guid="1af2ab04-ba39-401c-af34-b38981382cd2" ThisKey="ORDERID" OtherKey="ORDERID" Type="DEMOORDERITEM" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEMO_PRODUCT_INFO" Member="DEMOPRODUCTINFOs">
+    <Type Name="DEMOPRODUCTINFO" ed:Guid="eecb9025-a0d6-4cb5-b864-27c53283119d">
+      <Column Name="PRODUCT_ID" Member="PRODUCTID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="0ea341b2-446a-4248-aa8c-3c2d49fce3de" />
+      <Column Name="PRODUCT_NAME" Member="PRODUCTNAME" Type="System.String" DbType="VARCHAR2(50 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="50" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="3c93cbcb-662e-476c-bf7d-e8174cb0f65a" />
+      <Column Name="PRODUCT_DESCRIPTION" Member="PRODUCTDESCRIPTION" Type="System.String" DbType="VARCHAR2(2000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="2000" ed:ValidateMaxLength="2000" ed:ValidateRequired="false" ed:Guid="9ab07d82-58ed-4400-aad2-290a8b39334f" />
+      <Column Name="CATEGORY" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="2f650326-cfa5-46f3-a36d-04657920ebbd" />
+      <Column Name="PRODUCT_AVAIL" Member="PRODUCTAVAIL" Type="System.String" DbType="VARCHAR2(1 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="bdd20211-73eb-4f22-874f-a7d32c9a5b24" />
+      <Column Name="LIST_PRICE" Member="LISTPRICE" Type="System.Double" DbType="NUMBER(8,2) NULL" CanBeNull="true" UpdateCheck="Never" Precision="8" Scale="2" ed:ValidateRequired="false" ed:Guid="4fa5e77f-399d-42f8-ab69-19e3d4b41ce0" />
+      <Column Name="PRODUCT_IMAGE" Member="PRODUCTIMAGE" Type="System.Byte[]" DbType="BLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4cd3f23a-f0de-4d19-9174-108c2fbd566d" />
+      <Column Name="MIMETYPE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="8562993d-022d-481f-8fbf-8846e6e484b5" />
+      <Column Name="FILENAME" Type="System.String" DbType="VARCHAR2(400 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="400" ed:ValidateMaxLength="400" ed:ValidateRequired="false" ed:Guid="fe8d6ff9-aa57-42a4-9438-bdf533bcf745" />
+      <Column Name="IMAGE_LAST_UPDATE" Member="IMAGELASTUPDATE" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="b35157aa-6e82-48e4-bb18-a34b18985400" />
+      <Association Name="DEMOPRODUCTINFO_DEMOORDERITEM" ed:AssociationGuid="8e73a604-d625-4951-bd36-f5a80c883818" Member="DEMOORDERITEMs" ed:Guid="b3119f6c-4404-4131-a142-0acbd8b16e39" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="DEMOORDERITEM" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEMO_ORDER_ITEMS" Member="DEMOORDERITEMs">
+    <Type Name="DEMOORDERITEM" ed:Guid="cbaee939-30a6-4598-933e-3a807d6b1804">
+      <Column Name="ORDER_ITEM_ID" Member="ORDERITEMID" Type="System.Int32" DbType="NUMBER(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="3" ed:ValidateRequired="true" ed:Guid="d2f7b00e-c35e-4505-af92-882208725b92" />
+      <Column Name="ORDER_ID" Member="ORDERID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="73ac0efe-e44e-47a6-8f51-06101445ccea" />
+      <Column Name="PRODUCT_ID" Member="PRODUCTID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="e4d66720-0b62-44f6-ad2d-9ee5a2c52b07" />
+      <Column Name="UNIT_PRICE" Member="UNITPRICE" Type="System.Double" DbType="NUMBER(8,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="8" Scale="2" ed:ValidateRequired="true" ed:Guid="34625928-3583-47e1-a84f-ca38f8b72d1e" />
+      <Column Name="QUANTITY" Type="System.Int32" DbType="NUMBER(8) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="8" ed:ValidateRequired="true" ed:Guid="46245bb0-2dec-4e62-90b7-fdf9b1d0a241" />
+      <Association Name="DEMOORDER_DEMOORDERITEM" ed:AssociationGuid="4ad4aea3-ee0f-4e93-9c38-1d5c003b8758" Member="DEMOORDER" ed:Guid="338aaf09-4485-4d53-a1a6-2544ff160b53" ThisKey="ORDERID" OtherKey="ORDERID" Type="DEMOORDER" DeleteRule="CASCADE" IsForeignKey="true" />
+      <Association Name="DEMOPRODUCTINFO_DEMOORDERITEM" ed:AssociationGuid="8e73a604-d625-4951-bd36-f5a80c883818" Member="DEMOPRODUCTINFO" ed:Guid="fa676906-cc6a-46f8-baac-0f96894070ed" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="DEMOPRODUCTINFO" DeleteRule="CASCADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.DEMO_STATES" Member="DEMOSTATEs">
+    <Type Name="DEMOSTATE" ed:Guid="8f24123a-44a4-49f6-8cdb-e3369487da50">
+      <Column Name="ST" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="af215d65-eb05-45c7-9f96-7dbb46bc11e3" />
+      <Column Name="STATE_NAME" Member="STATENAME" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="4966c27e-e0f4-4cca-ab22-12dc1b41a4dc" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_ACL" Member="APEXACLs">
+    <Type Name="APEXACL" ed:Guid="4b23555b-487c-46ee-adb2-d076423b9a46">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7304e9bd-22b2-47f8-bdce-5e5b48fcd1b0" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1586f80a-2d5c-4053-982a-73e0eb70adb4" />
+      <Column Name="USERNAME" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="56ba4950-4b48-45b4-a8c8-ca6dafd2b4b4" />
+      <Column Name="PRIV" Type="System.String" DbType="VARCHAR2(1 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="true" ed:Guid="de588f1c-bed0-490c-a75e-2cc26d0e8324" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="cfe18a36-5fa5-4540-96e0-4d5b76e7e019" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="491cce47-3229-430a-811b-6ce52093f049" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="b07c1aa3-20d3-4c2b-9f45-d045b6d57efc" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="8970d6b1-e1f0-4ae6-b042-610cfe47f823" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_WEBPG_SECTIONS" Member="APEXWSWEBPGSECTIONs">
+    <Type Name="APEXWSWEBPGSECTION" ed:Guid="21cd806d-f6cd-4184-bf83-e7475737250c">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="84c7404e-2809-47fe-a8ed-668e72acbed2" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="16f8659f-0646-4a9d-9b74-45860d6f32b9" />
+      <Column Name="WEBPAGE_ID" Member="WEBPAGEID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="d9e10ff5-d92a-44b0-ae47-c1ce80ec50d0" />
+      <Column Name="DISPLAY_SEQUENCE" Member="DISPLAYSEQUENCE" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="555f2bd5-9cf4-4703-b6c1-3c879ce3dea1" />
+      <Column Name="SECTION_TYPE" Member="SECTIONTYPE" Type="System.String" DbType="VARCHAR2(30 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="true" ed:Guid="b00d0e3a-a9c0-4600-9147-5844394f4cba" />
+      <Column Name="TITLE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="ed935846-9e26-4f2b-8a9a-53418b3854fa" />
+      <Column Name="CONTENT" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="55d54fe3-46cf-42d1-ac2c-1e2eb99bb7a3" />
+      <Column Name="CONTENT_UPPER" Member="CONTENTUPPER" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="323d06b3-7fae-4882-bc6d-4f35c557a5fd" />
+      <Column Name="NAV_START_WEBPAGE_ID" Member="NAVSTARTWEBPAGEID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3a682d6d-d6ed-43b2-8cc9-01b8d0dc20df" />
+      <Column Name="NAV_MAX_LEVEL" Member="NAVMAXLEVEL" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3caf0f57-71bf-429b-bde8-209f73f4b50d" />
+      <Column Name="NAV_INCLUDE_LINK" Member="NAVINCLUDELINK" Type="System.String" DbType="VARCHAR2(1 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="06f1cc13-969f-45a1-ad58-902c5daa7161" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="8e45dcf7-a500-43bc-b60a-1bac1c77143a" />
+      <Column Name="REPORT_ID" Member="REPORTID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="479d1aee-8941-4387-b8cc-faf95a453ba0" />
+      <Column Name="DATA_SECTION_STYLE" Member="DATASECTIONSTYLE" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="76a2be47-41b2-4088-a7be-e9100f4d8494" />
+      <Column Name="CHART_TYPE" Member="CHARTTYPE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="58ae8644-5d39-4160-9e61-d52c67e083dc" />
+      <Column Name="CHART_3D" Member="CHART3D" Type="System.String" DbType="VARCHAR2(1 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="1edbf900-b4b2-49c6-a39f-787ed5741587" />
+      <Column Name="CHART_LABEL" Member="CHARTLABEL" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="dbd1e94d-5e59-401e-9af3-69f4a62808bb" />
+      <Column Name="LABEL_AXIS_TITLE" Member="LABELAXISTITLE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="0045aeaa-c44f-4753-8e1d-19b15abaab7f" />
+      <Column Name="CHART_VALUE" Member="CHARTVALUE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="5d04a012-ca62-42d2-9c25-1caed4665ff5" />
+      <Column Name="VALUE_AXIS_TITLE" Member="VALUEAXISTITLE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="edd0db6d-bccc-447e-a192-b03e52ed51e3" />
+      <Column Name="CHART_AGGREGATE" Member="CHARTAGGREGATE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="a3495def-46d2-4e0a-b8e6-0b8948c67fcb" />
+      <Column Name="CHART_SORTING" Member="CHARTSORTING" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="e35ec3b7-fc30-4245-b25b-c5098e2b2bdc" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="3e5495c7-6534-4d18-99ae-6946264bfad8" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="d9c9147d-35b8-484a-b676-3f9dcb0c7dcb" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="111ac201-2841-4f05-ac2a-96ab9f316fd0" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="a0e5843c-9ff2-4fd5-b3b9-2f0b56479fe0" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_ROWS" Member="APEXWSROWs">
+    <Type Name="APEXWSROW" ed:Guid="4e0832f7-d99e-42a8-a8ed-c3b8a963da57">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="41f5157c-8e09-45f6-863d-5d9718f689c8" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="df23eac9-cbe0-4419-a266-930308a2b6ff" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="494e68ce-071b-4c3e-ac91-c89f761b1b43" />
+      <Column Name="UNIQUE_VALUE" Member="UNIQUEVALUE" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="60138447-0160-450b-ac9a-b83fd11e88a7" />
+      <Column Name="TAGS" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="07fe67fe-724a-4618-b6f4-7e06208a0fca" />
+      <Column Name="PARENT_ROW_ID" Member="PARENTROWID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6c4f17e4-95bf-4b43-85e7-02a7af4082e1" />
+      <Column Name="OWNER" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="a97116e0-affa-4f96-ab44-8178243d41af" />
+      <Column Name="GEOCODE" Type="System.String" DbType="VARCHAR2(512 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="512" ed:ValidateMaxLength="512" ed:ValidateRequired="false" ed:Guid="8dece55f-b91d-4249-8bdf-49199a8c4b82" />
+      <Column Name="LOAD_ORDER" Member="LOADORDER" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="29765aca-38ca-4d93-8900-c70f14e555a7" />
+      <Column Name="CHANGE_COUNT" Member="CHANGECOUNT" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="b421b1e5-aa45-4a13-950e-31c9e7e222c8" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="5fa9bbbc-e43f-440e-bd81-12cd11ba72ef" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="ab1bd75f-8c64-45f9-ab46-940daea6b551" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="fdd713bf-c842-44e7-94c1-c04bc568ea94" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="d44f5a45-5bb2-4f77-915e-ebd709ddfc66" />
+      <Column Name="C001" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="72efca3e-6c27-43d6-b2b2-523655c403de" />
+      <Column Name="C002" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="ffb050f5-16a4-4fdb-b6cf-889cbb9741d3" />
+      <Column Name="C003" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f210a131-c36d-4b43-b6ea-6ddb8c2e2f4c" />
+      <Column Name="C004" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="307b844c-960a-427d-9f55-fe786ebf776e" />
+      <Column Name="C005" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="6c99fb99-51f1-4e9f-af45-a0b26c7f7546" />
+      <Column Name="C006" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="d3dcbfa6-958e-4761-9809-321f5cff294f" />
+      <Column Name="C007" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="24bfd01a-48b5-46d6-a605-3fb996fed2a1" />
+      <Column Name="C008" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="4d3cceb2-ca22-48a9-b0ce-0286425a40d0" />
+      <Column Name="C009" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="7ad66333-8747-4845-b06a-07cc688f2109" />
+      <Column Name="C010" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="62ead7ca-059b-4488-8824-88a5f88b7c09" />
+      <Column Name="C011" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="a1ef1c1e-e43f-489e-b9ae-5e238d67260b" />
+      <Column Name="C012" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="e7f9b860-4fba-4e64-a62c-1c967713187f" />
+      <Column Name="C013" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="16bf84b1-1feb-4aef-b902-edd28ecf5c6f" />
+      <Column Name="C014" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="0b09ec4a-4297-4234-864d-4862d8eca791" />
+      <Column Name="C015" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="027af1fb-6d89-4f78-920a-c5087d2964b8" />
+      <Column Name="C016" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f97635d7-973d-4731-b696-d428b3e458a4" />
+      <Column Name="C017" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="6ee29c50-79e9-4af6-bdcc-810f993ce64d" />
+      <Column Name="C018" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="18812c6a-60a2-4806-b872-73d8e3a6bef0" />
+      <Column Name="C019" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="572e015c-347a-4b34-940e-2dc2e9af48ae" />
+      <Column Name="C020" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="591b5046-c27d-4ed5-a293-ee044cd9f3d0" />
+      <Column Name="C021" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="47923332-05b8-45db-9ecf-1d8d7c334f4b" />
+      <Column Name="C022" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="ada20a0d-c163-43a0-bedb-6238b786b59b" />
+      <Column Name="C023" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="8d38f790-5872-49f5-9b8e-149517762597" />
+      <Column Name="C024" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="7040b0c1-f264-4821-b5e5-e4527586be94" />
+      <Column Name="C025" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f2cbf2f6-c7cf-42f8-b537-0958342321fc" />
+      <Column Name="C026" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="21bfe67c-32cf-4e94-a33d-0668e18a3f78" />
+      <Column Name="C027" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="6a2c0ab4-89b7-414a-85ca-4a78ab311249" />
+      <Column Name="C028" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="6478ea43-1223-45ee-a3c3-ac7b5825116f" />
+      <Column Name="C029" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="2ddb7b1a-0400-4319-a14c-e69a8a2a18f3" />
+      <Column Name="C030" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="5b72c4d7-687b-4158-af62-92d91631db8d" />
+      <Column Name="C031" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="e1529740-fea4-4c56-a13f-12bb57ec758d" />
+      <Column Name="C032" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="b2e6cfd2-6da2-4bd8-9089-7c54b75ec1fd" />
+      <Column Name="C033" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="e4247679-6775-41ab-b5a4-ffeeb8ea81be" />
+      <Column Name="C034" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="3bf0d7ce-8f9c-4625-966b-51b7ca538cb4" />
+      <Column Name="C035" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="757a5e98-158e-4df1-b3e1-44e38d81d53e" />
+      <Column Name="C036" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="defd4358-db28-4d82-91c0-c2cec7c540f3" />
+      <Column Name="C037" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="404b4ee9-4d50-4914-b41e-0371d465b0cc" />
+      <Column Name="C038" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="df4d012e-2df0-406b-9d8e-dd2ccf0fe7a0" />
+      <Column Name="C039" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="2cde176e-bc80-4480-832c-9422a888bbba" />
+      <Column Name="C040" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="a1de5278-0f07-4006-8fec-a4aab98a8abd" />
+      <Column Name="C041" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="c67eec09-af38-404d-ad5a-1ad601b74a3d" />
+      <Column Name="C042" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="87ff01d9-70f9-4b18-9969-d7706c054c1f" />
+      <Column Name="C043" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f36da390-96fa-42eb-9f9b-0cc789e93083" />
+      <Column Name="C044" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="b41080ee-8a09-49cb-9c86-b6bba8d18d61" />
+      <Column Name="C045" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="8bb80d88-4faa-4217-b088-6a5dea0cc2cf" />
+      <Column Name="C046" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="29e7b247-49ab-4f53-80ac-b2b0427052c3" />
+      <Column Name="C047" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="391e89d0-e10d-473b-a607-3e8e986fe2a2" />
+      <Column Name="C048" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="3c456231-bd9e-4882-aa43-dfd5d9d3f025" />
+      <Column Name="C049" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="85179737-bd4d-4e00-999c-aa9c2ce39002" />
+      <Column Name="C050" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="0e619228-90d5-414f-8f31-f645acf6f318" />
+      <Column Name="N001" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5ace2960-cef4-4aa6-8b95-776bf00a6574" />
+      <Column Name="N002" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="012809bc-27e0-4c19-b3ff-e9b8e654c1c5" />
+      <Column Name="N003" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="57b14ffb-ea01-47d1-82c6-b15e089e4ca8" />
+      <Column Name="N004" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="99e11bc5-d0aa-4c08-bcbe-9827b95bd156" />
+      <Column Name="N005" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="16c3aafa-66f1-4465-9b4d-5f0ff669317b" />
+      <Column Name="N006" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="72a93258-dbc4-4124-a8dd-d88cff1dfd90" />
+      <Column Name="N007" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="07e8ad1f-c7c6-4edc-93ce-65128c0010f0" />
+      <Column Name="N008" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="420fc4cb-27ae-4571-ad10-768af4a05dc8" />
+      <Column Name="N009" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="eba2641e-996c-442e-8320-b4c4e4c78eaf" />
+      <Column Name="N010" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fe2ef2d3-f7a4-4e7c-b82a-9475a1d0a5d6" />
+      <Column Name="N011" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="275433d9-084e-42e0-be79-2205c78d3127" />
+      <Column Name="N012" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="38dc1be2-e22c-4a0c-84d0-351c23484a9e" />
+      <Column Name="N013" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="78db216b-64b5-4fac-961d-93ea8688ed8f" />
+      <Column Name="N014" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fe2bfc3e-4b39-4ec5-8213-e09d5bf619cd" />
+      <Column Name="N015" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="70f854ab-6d0d-449c-b2ce-3723817cf6d0" />
+      <Column Name="N016" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="b28edb8a-5cff-4737-ad9d-c906c1f4f70f" />
+      <Column Name="N017" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e2056e3f-a2bf-48a1-bd56-9d2ff8cdefa0" />
+      <Column Name="N018" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="2511e01e-77cb-4385-a464-5e8fef4dc812" />
+      <Column Name="N019" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="cda89f1c-c3d7-45cd-b4bb-1f5ec866206d" />
+      <Column Name="N020" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f97cd236-4359-432d-b476-e506e5808cc1" />
+      <Column Name="N021" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e86baf11-4295-4dd0-8843-d5e1c0c42c0f" />
+      <Column Name="N022" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="82b1f1e7-71ca-4c8e-bb0f-bedd07b75031" />
+      <Column Name="N023" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ac22c196-eaae-4201-9084-48c23839f51d" />
+      <Column Name="N024" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="79251ae6-92fe-4b96-b072-a3d0284fed99" />
+      <Column Name="N025" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f7b8136d-a192-4c7f-a5cd-5fdbf9fc4518" />
+      <Column Name="N026" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7b5e4e6a-a08c-4d23-ab5f-11ccf2ca5675" />
+      <Column Name="N027" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4b035e8a-011e-4216-9169-f679c99388b8" />
+      <Column Name="N028" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e328ba25-b39d-4188-9f3f-dbb6c7fe1873" />
+      <Column Name="N029" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="959a30a1-5792-45b6-ae68-c452da91efeb" />
+      <Column Name="N030" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="d1d6ea3f-3871-4c3e-bb8b-9a030943a458" />
+      <Column Name="N031" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="a258fc9a-c124-4dee-bf91-589635b7f2ad" />
+      <Column Name="N032" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4b0ce684-1a76-4d17-907b-0877343b2cda" />
+      <Column Name="N033" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ab1e3315-0958-4df3-b59a-d30a34c78a38" />
+      <Column Name="N034" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9bdebef5-dcbb-4bcb-b74f-1f11d096a047" />
+      <Column Name="N035" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9889821c-5fb7-44ab-971e-b17215624378" />
+      <Column Name="N036" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9fe0d303-de72-4136-9f0e-e0365cd5ca05" />
+      <Column Name="N037" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ceca8f67-b44f-4bbb-b18d-5e161eef5d12" />
+      <Column Name="N038" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7246aa14-bd08-40b7-b726-2f5f485db43d" />
+      <Column Name="N039" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="25c866b5-b2a2-4bb4-98d3-6098c3ec6c73" />
+      <Column Name="N040" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="2c02be03-73a9-4c02-af3e-d8d63bcb9c1b" />
+      <Column Name="N041" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="435bc2ae-b758-442f-814a-69041132d6a3" />
+      <Column Name="N042" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="c507e2bb-f446-4d87-9946-30f5340b7428" />
+      <Column Name="N043" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="bbe061b9-d23e-4939-a649-a9c226e7ff49" />
+      <Column Name="N044" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6d6d1a7a-b021-4982-9600-5dfd8b6e78c7" />
+      <Column Name="N045" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fa108769-eba1-4f5d-9aa8-fee9dc03162a" />
+      <Column Name="N046" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e1e8dcdb-f0ba-4e83-ba8c-245c687a072a" />
+      <Column Name="N047" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="54f93de3-f98c-4eb3-83bb-91b7a327da37" />
+      <Column Name="N048" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7e507927-ac57-45e1-9546-741aac3b719d" />
+      <Column Name="N049" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7b0275c2-a357-43de-b795-24770aa851d0" />
+      <Column Name="N050" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="aca05ec4-00ef-497f-886e-2418f6d4d623" />
+      <Column Name="D001" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="737f797e-90c2-4f0c-affe-508b5b078a9c" />
+      <Column Name="D002" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="3944f890-c264-4df1-81a5-5a8c7e261bfe" />
+      <Column Name="D003" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="d010b5a5-ddf0-42ac-8f65-5f255304067a" />
+      <Column Name="D004" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="7aaf65e2-feb1-46ce-b6a6-342e4b3ddd4f" />
+      <Column Name="D005" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="9dbda246-6a5d-46f0-a47c-39ddf1cb5438" />
+      <Column Name="D006" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="1dd1cfbc-db4b-43d1-9014-c0e703617bce" />
+      <Column Name="D007" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="93a46293-c895-42a7-8b15-df82acb78a52" />
+      <Column Name="D008" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="86f18ba4-2cad-4aea-a5c7-59cad2b3266f" />
+      <Column Name="D009" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="1f9270eb-b943-4c66-bb59-2b1f3942a970" />
+      <Column Name="D010" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="3e6dba5c-bad6-41fa-b96d-2d038f5edb88" />
+      <Column Name="D011" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="46c9c7a7-56d9-4cdc-82a7-d23678661253" />
+      <Column Name="D012" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="5f70714d-a6ef-4003-bd50-03655db13c4e" />
+      <Column Name="D013" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="b2605cd1-a30c-449a-89ff-c9a7605f1984" />
+      <Column Name="D014" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="f817230e-54b2-49a9-a84b-d6d35594b9df" />
+      <Column Name="D015" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="048ef938-cd5e-43ab-bec8-071c1b562c4e" />
+      <Column Name="D016" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="e53b20fe-42f8-421a-b14e-334f4324d7f4" />
+      <Column Name="D017" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="a86d4210-d92c-466c-a140-051452864df3" />
+      <Column Name="D018" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="b611c8e2-baaf-4a96-a924-bdc6dc4dc389" />
+      <Column Name="D019" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="1276cef8-315b-4533-84ab-8a3e51432af3" />
+      <Column Name="D020" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="ccd1b0a1-d52e-429a-b23f-6b4a71b6dc17" />
+      <Column Name="D021" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="c0b0f311-7a6a-4eb8-80fe-f98fedd5149d" />
+      <Column Name="D022" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="9dc5d0ff-23e1-4eb3-a84b-14adde4db322" />
+      <Column Name="D023" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="63e758f6-d4d7-487f-8b0a-c841f0ce3c2d" />
+      <Column Name="D024" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="a03acc1a-c68b-4d45-81c4-28e2cb7bb94f" />
+      <Column Name="D025" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="205fab01-872e-4150-a576-0c08073556fb" />
+      <Column Name="D026" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="571c0280-e509-44be-bcb9-69f5728266fd" />
+      <Column Name="D027" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="df5275f8-fdc7-4876-bc55-88df92eca4f3" />
+      <Column Name="D028" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="c2253207-ae37-477a-95af-b1e22c1ddc90" />
+      <Column Name="D029" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="d27bd540-9eb8-4902-82e0-f62b51ef7c43" />
+      <Column Name="D030" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="8485fbea-0ac5-442f-931d-292114770d91" />
+      <Column Name="D031" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="bf2ec3ab-fb00-4421-ac15-a482343b5287" />
+      <Column Name="D032" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="e5110e9d-c7a1-46d3-a0eb-b2f78a1a88bb" />
+      <Column Name="D033" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="1b131ffb-d25c-4817-b602-a223f1116565" />
+      <Column Name="D034" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="71e35c50-a079-4f98-a5c5-fab1a90440bb" />
+      <Column Name="D035" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="bab3e14d-7b3a-4c82-868f-0795ab64ebcd" />
+      <Column Name="D036" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="4c05aa27-a826-42fa-89b7-c82188b29499" />
+      <Column Name="D037" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="86c833fe-16fb-4d16-8f06-26ee409faa6f" />
+      <Column Name="D038" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="89d037e5-3186-4bc3-b2ab-314a2ac054e1" />
+      <Column Name="D039" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="2435b145-f3bc-4f4c-b663-56ec83860013" />
+      <Column Name="D040" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="78fef9eb-82fd-489b-95b1-3af8c73b0b43" />
+      <Column Name="D041" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="cdb9bdcc-b78e-420b-9a3a-3950d3d2519f" />
+      <Column Name="D042" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="89968387-8a58-40cf-aa68-631d3a386d7c" />
+      <Column Name="D043" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="30134764-efef-4bb6-bcd3-6d66cbe75853" />
+      <Column Name="D044" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="9dc97822-43d6-4f9d-b26b-a4ade36f9bc6" />
+      <Column Name="D045" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="443bb59e-e9fc-453f-a118-c9d9cee84e85" />
+      <Column Name="D046" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="a7eaf747-a5c2-482b-a334-f588731e35fc" />
+      <Column Name="D047" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="8e7bced4-2b6a-46d6-afde-26706eda0d86" />
+      <Column Name="D048" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="6e0747cd-e6ac-4330-9c83-bed66497b8f5" />
+      <Column Name="D049" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="ec051178-68ba-4347-87de-83cd8c391255" />
+      <Column Name="D050" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="6c60d33f-1cfd-46b4-9643-1270bc68ec93" />
+      <Column Name="CLOB001" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3b15f0a6-b6c4-4806-bd80-0f8cf812ca3a" />
+      <Column Name="SEARCH_CLOB" Member="SEARCHCLOB" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="319b6e32-22f8-4cc9-b98c-61acf90c2537" />
+      <Association Name="APEXWSROW_APEXWSTAG" ed:AssociationGuid="2f8e59a3-6d54-4b5f-a9ef-90062cff79bc" Member="APEXWSTAGs" ed:Guid="bcdd4c60-9d15-4aa5-b2fe-29e5056cdf31" ThisKey="ID" OtherKey="ROWID" Type="APEXWSTAG" />
+      <Association Name="APEXWSROW_APEXWSFILE" ed:AssociationGuid="9ea74f9e-16ee-4431-9f48-b9c1def1fa14" Member="APEXWSFILEs" ed:Guid="d7072862-18d9-468b-b13a-4893cd47ecd7" ThisKey="ID" OtherKey="ROWID" Type="APEXWSFILE" />
+      <Association Name="APEXWSROW_APEXWSNOTE" ed:AssociationGuid="e30bc448-76eb-43f9-ac64-6f6a420574b2" Member="APEXWSNOTEs" ed:Guid="c774fa93-f965-470e-acb8-aea50fa692e7" ThisKey="ID" OtherKey="ROWID" Type="APEXWSNOTE" />
+      <Association Name="APEXWSROW_APEXWSLINK" ed:AssociationGuid="072cb72b-45bd-4d4f-8edd-51a702cc01a9" Member="APEXWSLINKs" ed:Guid="a44adaaf-9110-4550-b55a-07a7857b2696" ThisKey="ID" OtherKey="ROWID" Type="APEXWSLINK" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_HISTORY" Member="APEXWSHISTORIES">
+    <Type Name="APEXWSHISTORY" ed:Guid="33e183be-0211-458a-991e-1dd02bc7088a">
+      <Column Name="ROW_ID" Member="ROWID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="14289c5f-dfb5-4587-a9e6-76d1f6868127" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="cfd34067-2277-40ee-a84e-b1cd62bf3a74" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d056713a-e970-423d-b825-363f2b5bb6e3" />
+      <Column Name="COLUMN_NAME" Member="COLUMNNAME" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="d4f1c737-8612-41aa-8db4-62a3487aed17" />
+      <Column Name="OLD_VALUE" Member="OLDVALUE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="02e15ffd-6a4f-4dd5-aefd-7101c636c06f" />
+      <Column Name="NEW_VALUE" Member="NEWVALUE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="f6e69f5f-82b2-44db-af32-2716545ba089" />
+      <Column Name="APPLICATION_USER_ID" Member="APPLICATIONUSERID" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="251c8f05-a31b-45a4-bbd3-1aa51cbe0462" />
+      <Column Name="CHANGE_DATE" Member="CHANGEDATE" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="d734bdd1-bb93-4aad-bbda-b8a751baa21c" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_NOTES" Member="APEXWSNOTEs">
+    <Type Name="APEXWSNOTE" ed:Guid="8f59ebef-4662-4dc9-b8a8-5d4ccd4ca133">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="822855fc-690e-4b7a-a96a-ff8a55c5dca6" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9c27a3a6-b2e8-492b-bd74-253491020c97" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5bdd812b-d682-45af-98db-20aae395c2a4" />
+      <Column Name="ROW_ID" Member="ROWID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="238608b6-eaba-44f5-9974-cb15fee09d21" />
+      <Column Name="WEBPAGE_ID" Member="WEBPAGEID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="97a983c0-2b82-4e89-a548-2153de790bea" />
+      <Column Name="COMPONENT_LEVEL" Member="COMPONENTLEVEL" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="e620dc6e-e862-4fe8-b671-74de91d8321c" />
+      <Column Name="CONTENT" Type="System.String" DbType="CLOB NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="cef0985b-f6f4-45eb-90d0-ae3589c4ca83" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="84f97643-30b0-49e9-9482-3f532be723c2" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="96eb3121-6f74-47e6-b30c-b264afafd07c" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="207add1b-ec82-4e3d-acd5-eca85ca2a31b" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="76f088dc-d79a-4799-9bda-e0ef7f1da4ac" />
+      <Association Name="APEXWSROW_APEXWSNOTE" ed:AssociationGuid="e30bc448-76eb-43f9-ac64-6f6a420574b2" Member="APEXWSROW" ed:Guid="18878a12-7676-4077-b16c-77ea64db2e12" ThisKey="ROWID" OtherKey="ID" Type="APEXWSROW" DeleteRule="CASCADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PORTAFOLIO.APEX$_WS_LINKS" Member="APEXWSLINKs">
+    <Type Name="APEXWSLINK" ed:Guid="73fe16c2-308d-4a39-8451-f17a9b521fd8">
+      <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="c060ae9b-32e0-442b-ba60-932ea00cc8d5" />
+      <Column Name="WS_APP_ID" Member="WSAPPID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="27b9b1e5-3974-429f-93d9-0da6b5b01056" />
+      <Column Name="DATA_GRID_ID" Member="DATAGRIDID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5b73b602-9878-4c12-a924-80bddb0cc56d" />
+      <Column Name="ROW_ID" Member="ROWID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fe90e19f-b40f-4fef-a909-7783217fa647" />
+      <Column Name="WEBPAGE_ID" Member="WEBPAGEID" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e5be3ea8-b5d8-4ba7-bc94-edf640023426" />
+      <Column Name="COMPONENT_LEVEL" Member="COMPONENTLEVEL" Type="System.String" DbType="VARCHAR2(30 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="30" ed:ValidateMaxLength="30" ed:ValidateRequired="false" ed:Guid="90198875-f49e-4396-8c4b-6a44a0c1aa85" />
+      <Column Name="TAGS" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="6ab50d71-cc25-46d0-ad3d-40ed9ca6d58f" />
+      <Column Name="SHOW_ON_HOMEPAGE" Member="SHOWONHOMEPAGE" Type="System.String" DbType="VARCHAR2(1 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="1" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="61ac42f6-c7ea-4005-a388-f779aacc65ee" />
+      <Column Name="LINK_NAME" Member="LINKNAME" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="d07e4521-a8aa-4552-9270-bd49d2537dfc" />
+      <Column Name="URL" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="true" ed:Guid="1b226510-5541-48b6-9c1b-b19fc78e2768" />
+      <Column Name="LINK_DESCRIPTION" Member="LINKDESCRIPTION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="4000" ed:ValidateMaxLength="4000" ed:ValidateRequired="false" ed:Guid="48dc256b-8eb7-49d1-a491-669bc41ea6f6" />
+      <Column Name="DISPLAY_SEQUENCE" Member="DISPLAYSEQUENCE" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4d352fae-294f-4cb5-9c65-e600728bc9c2" />
+      <Column Name="CREATED_ON" Member="CREATEDON" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="e8cbfd0b-cefc-489b-800e-fa5930a50a0c" />
+      <Column Name="CREATED_BY" Member="CREATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="67722f21-099b-4701-a872-8434e7cf7afc" />
+      <Column Name="UPDATED_ON" Member="UPDATEDON" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" Precision="0" ed:ValidateRequired="false" ed:Guid="a3269eca-af33-433a-bf02-994caa24a806" />
+      <Column Name="UPDATED_BY" Member="UPDATEDBY" Type="System.String" DbType="VARCHAR2(255 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" MaxLength="255" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="3adb5b28-c95c-4698-a578-7fa4c1bf8bf1" />
+      <Association Name="APEXWSROW_APEXWSLINK" ed:AssociationGuid="072cb72b-45bd-4d4f-8edd-51a702cc01a9" Member="APEXWSROW" ed:Guid="42ef90bb-69a2-405f-a2bd-94863dbd943f" ThisKey="ROWID" OtherKey="ID" Type="APEXWSROW" DeleteRule="CASCADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Type Name="SELECTUSUARIOSADMREGIONResult" ed:Guid="4572d0e8-294e-4063-bf68-ed1ce267cd5b">
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b7b7164e-8639-4fff-8b02-dd0381fb7654" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1f788e30-29a9-4a09-9eaa-29e36ebe1fe5" />
+    <Column Name="&quot;A PATERNO&quot;" Member="APATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5dc90f20-511d-484b-823e-1d7a347bd712" />
+    <Column Name="&quot;A MATERNO&quot;" Member="AMATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="fefe0d0d-a51a-4079-ae76-5835b26aff6a" />
+    <Column Name="CORREO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c59ede4d-4e4d-4a53-ad6f-7dca594c2236" />
+    <Column Name="FONO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="24b452b1-cfe3-47de-9f77-738f8073a39a" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3f6b58bb-6bf9-420c-b6f2-faf01b151c09" />
+    <Column Name="DIRECCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e6eb0324-4f65-47be-8c60-8ea3228b129b" />
+    <Column Name="COMUNA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="1b105a5c-5136-4f99-92fe-4882ebc05736" />
+    <Column Name="PROVINCIA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="30ece63c-2c4c-430e-a0e5-3bfddf660783" />
+    <Column Name="REGION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="bc0a89fa-9935-49c0-9ac8-6c4b1ffab3b2" />
+    <Column Name="ESTADO" Type="System.String" DbType="CHAR(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="0defbc66-e579-4a15-a387-f08e169083f5" />
+  </Type>
+  <Type Name="SELECTPRODUCTOSADMCODResult" ed:Guid="d10c318a-61bc-4f5e-bc4e-c64d6b42e0c9">
+    <Column Name="COD_PRODUCTO" Member="CODPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7eae9ddf-7176-455a-9754-70b10c6087b5" />
+    <Column Name="NOMBBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="1ef59cb2-c41c-4297-b2a9-2c0c85379334" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="175bac5a-da4b-4b13-b17b-d68f4c9d188c" />
+    <Column Name="VALOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="bea69c46-5f04-4a2e-a4cd-90f593706907" />
+    <Column Name="ESTADO" Type="System.String" DbType="CHAR(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="ed53d46b-71dc-4fe5-a613-e5d3fb19adcc" />
+  </Type>
+  <Type Name="SELECTPRODUCTORPORPRODCOMResult" ed:Guid="c0c4fb70-eec3-40d0-b640-1605c4abdeda">
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="56ef2d7c-2f36-4fc9-b2be-64b1b1025ac2" />
+    <Column Name="&quot;Nombre&quot;" Member="Nombre" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="914ccdde-36e0-4896-9a68-cc7d1b29a1ff" />
+    <Column Name="&quot;Stock&quot;" Member="Stock" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d693df4d-8c0e-42cc-829c-4dd7ca9a9bec" />
+    <Column Name="&quot;Direccion&quot;" Member="Direccion" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="dd699fb7-1848-48ec-be19-e789080debf0" />
+    <Column Name="&quot;Comuna&quot;" Member="Comuna" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6800ea7a-a73c-4cd4-9f3a-f08c6a66597e" />
+    <Column Name="&quot;Provincia&quot;" Member="Provincia" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b0fc0f8c-3cef-4b43-ab86-330c8d2c5416" />
+    <Column Name="&quot;region&quot;" Member="Region" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="795a637a-adbf-4133-bf81-416063c067c1" />
+  </Type>
+  <Type Name="SELECTAGREGARALCARROResult" ed:Guid="61222754-47d6-4661-bb89-c9146ed4f141">
+    <Column Name="COD_PRODUCTO" Member="CODPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b497b4a0-92a2-4913-9317-c82b184f5fe6" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="30700b4d-05bc-4cb5-b829-29730f2bd63a" />
+    <Column Name="VALOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b2d6ac19-a543-4dca-afc8-d81c06729369" />
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="06a610f3-15aa-4289-8986-95e819f8207a" />
+    <Column Name="STOCK" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c8fd7316-1b91-4ef8-b5a9-f7e818fbaa24" />
+  </Type>
+  <Type Name="SELECTUSUARIOSADMResult" ed:Guid="210b9499-7631-430a-8103-d06400f4f64d">
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4e757a47-f984-4a57-b62a-f1954f92fc4a" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="73e45341-43ec-49cc-b985-367ea8472248" />
+    <Column Name="&quot;A PATERNO&quot;" Member="APATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d04daf31-09bb-408e-83e1-4bd365486a9e" />
+    <Column Name="&quot;A MATERNO&quot;" Member="AMATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="0eaf832e-ba31-4529-a049-9c550e60cd60" />
+    <Column Name="CORREO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a778a044-7ae4-4ade-a347-39e24aacfc7d" />
+    <Column Name="FONO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4fa5a007-8911-4bfe-a7be-cf2e47814fba" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="09159739-d571-45e3-b399-85117f80adff" />
+    <Column Name="DIRECCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="dad71208-23fd-40a2-8cf7-df0e7410f0d2" />
+    <Column Name="COMUNA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5a3aa2d8-3347-4866-ad0f-267d393ad9f9" />
+    <Column Name="PROVINCIA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="93e8c1b1-48ce-4da1-993e-4f3542172d01" />
+    <Column Name="REGION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="e453454b-e69f-4985-a1e4-18368f470f69" />
+    <Column Name="ESTADO" Type="System.String" DbType="CHAR(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="c7932966-e3a0-459b-9a27-f1647f703fcc" />
+  </Type>
+  <Type Name="SELECTUSUARIOBYRUTResult" ed:Guid="ef0eb71a-59cc-4066-88fa-fdca2eb515b9">
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="e20f0da9-10a5-4027-b073-146ec3b3d129" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="223c8c2d-331c-49c4-9646-8c4da1cc0bb1" />
+    <Column Name="&quot;A PATERNO&quot;" Member="APATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5f400f02-7ba9-459d-a1aa-1975c507e273" />
+    <Column Name="&quot;A MATERNO&quot;" Member="AMATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="100fbbb6-c0eb-4a7d-9aa0-306854c477e7" />
+    <Column Name="CORREO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c53df76b-5b07-4e79-81fc-cf7bddda99a3" />
+    <Column Name="FONO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c68b2309-ca7d-4be0-8e90-40e84fe4e1d5" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="57a16c1a-d2b9-49e3-be9c-5a353735fa55" />
+    <Column Name="DIRECCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="912abd78-9f69-45da-ab3b-d1471620d95a" />
+    <Column Name="COMUNA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b64e84bd-94a8-48bf-95ad-6f047845ee41" />
+    <Column Name="PROVINCIA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="8ba42187-3727-46b7-8cfe-6eb52b3f6908" />
+    <Column Name="REGION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9fc26347-92dd-4113-b055-10661df5977a" />
+  </Type>
+  <Type Name="SELECTPRODUCTO2Result" ed:Guid="4e1f9c44-17a3-4dc1-8652-8f79416b0a84">
+    <Column Name="COD_PRODUCTO" Member="CODPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="479305b0-ba63-414e-9242-7ea174a108d7" />
+    <Column Name="NOMBBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="b4fb8f6e-0759-41c6-8e11-c2cb09804bd3" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="2bacb7d9-91d5-4836-9677-67f00dd71241" />
+    <Column Name="VALOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="962e92ee-0431-4447-829f-7302b2ac5fc4" />
+  </Type>
+  <Type Name="SELECTPRODUCTORESREGIONResult" ed:Guid="542859d1-8c11-40c8-9d36-de2cdfc5d1d5">
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6b5298df-d15a-49ff-99ab-069c55857c66" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f2598216-48ed-48e6-91d5-6e9533e8dd70" />
+    <Column Name="&quot;A PATERNO&quot;" Member="APATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2d142724-d4b6-4aaa-a4fb-9c59c81d7b9e" />
+    <Column Name="&quot;A MATERNO&quot;" Member="AMATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3779b8a9-71d8-42ea-8608-943da6c7f1c6" />
+    <Column Name="CORREO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f64fcc28-f079-4c9f-ab0e-389976f2ecc1" />
+    <Column Name="FONO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d9471773-32dd-41be-b59d-2a437483e2b0" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4fce421d-0099-4724-a489-140db3c9505a" />
+    <Column Name="DIRECCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="539ea2cf-016e-4eb3-aa15-8353d883923a" />
+    <Column Name="COMUNA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="29b8c8b0-2536-47dd-9973-0039df3b5480" />
+    <Column Name="PROVINCIA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4b3f5e72-a665-40a8-ace8-85567661bf56" />
+    <Column Name="REGION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9f655e90-42e8-4a0d-8bf4-c9d2c52139fd" />
+  </Type>
+  <Type Name="BUSCARRUTPORCODPEDIDOResult" ed:Guid="c9196cc3-b561-47de-a7c6-f2ed94edc2a9">
+    <Column Name="RUTUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f70d3165-57ce-4efd-954b-a4ab3897f46b" />
+  </Type>
+  <Type Name="LOGINResult" ed:Guid="2b27a4cb-7bc3-486d-96d4-c963d93ae61f">
+    <Column Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a56af8ad-4894-4d58-8572-15ee4b80e94e" />
+    <Column Name="RUTUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="0dd497fc-2fa9-40d2-a060-33c815c6350c" />
+    <Column Name="NOMBREUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3437d734-0eda-4101-97c0-58fbdea45eee" />
+    <Column Name="APELLIDOPATERNOUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="891f9c44-4bf8-4a30-8336-3a551c8cb9ff" />
+    <Column Name="APELLIDOMATERNOUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2e3a8961-3ef4-4acb-89e0-881eb0670c81" />
+    <Column Name="CORREOUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d4eaa5a7-f873-4a3a-b9e0-81c57f317020" />
+    <Column Name="TELEFONOUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9c3c4dfa-57e8-4bf3-95d3-163871424b22" />
+    <Column Name="DESCRIPCIONUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="0baa6be3-0272-4cf1-994b-85db710fa15a" />
+    <Column Name="CLAVEUSUARIO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5e692eb1-abd1-422f-a9f0-4e41fa281c9c" />
+    <Column Name="TIPOUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2365ace8-d84a-4094-b5a5-046872c59a32" />
+    <Column Name="ESTADOUSUARIO" Type="System.String" DbType="CHAR(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="bfb9ba61-ef6e-44df-8d4a-7d48c0178b0b" />
+  </Type>
+  <Type Name="IDCODBOLETACARRITODECOMPRAResult" ed:Guid="703a3d3b-68de-410b-a60f-b63f97fe70c8">
+    <Column Name="IDDOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="8aa02a3e-3864-425c-94ee-5bc29b698ddd" />
+  </Type>
+  <Type Name="HISTORIALDECOMPRAResult" ed:Guid="4361dd1e-cedc-4a32-a1c6-f017b54ba86f">
+    <Column Name="&quot;Cod_boleta&quot;" Member="CodBoleta" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="e8cb6f8f-15f5-41af-a01b-d49ecc9707a3" />
+    <Column Name="&quot;Total&quot;" Member="Total" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="057fc631-ee4c-4d99-bf5a-8d9b8cd630e6" />
+    <Column Name="&quot;Fecha emision&quot;" Member="Fechaemision" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="0" ed:ValidateRequired="true" ed:Guid="f36cbc3e-314d-4a05-9c3c-adcc5dc67790" />
+  </Type>
+  <Type Name="CARRITODECOMPRAResult" ed:Guid="6aa4c1c7-f943-44b2-8306-784308b45bad">
+    <Column Name="COD_PEDIDO" Member="CODPEDIDO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="ed5a8b83-c863-4c7b-9f05-ac263f70ba93" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4175a757-f5da-4a03-88b3-68b2f79185ff" />
+    <Column Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5eeeb1e9-a9a8-4cf0-8017-7d3d7da29226" />
+    <Column Name="VALOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="79e0b554-7a18-45fa-ae9d-9f54226e3171" />
+    <Column Name="SUBTOTAL" Type="System.Decimal" DbType="NUMBER NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e2dcb631-8dce-4254-acab-41441d647389" />
+    <Column Name="&quot;Rut Productor&quot;" Member="RutProductor" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4ae8f13d-2bd8-4b4f-be4e-6e6ed1ac587c" />
+  </Type>
+  <Type Name="SELECTPRODUCTORESNOMBREResult" ed:Guid="2a0f037a-8bbf-4835-b6ea-e57a4adb9453">
+    <Column Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="96024518-54ad-4b3e-94a9-dd8447a34ac4" />
+    <Column Name="NOMBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f9babb69-4879-42f6-a633-ccb55a922219" />
+    <Column Name="&quot;A PATERNO&quot;" Member="APATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c1ac25e1-b7f9-496a-9349-0b644b506f4a" />
+    <Column Name="&quot;A MATERNO&quot;" Member="AMATERNO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9f5eb172-ea61-4cea-a662-f54a800bdab0" />
+    <Column Name="CORREO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="eb6ef4f7-cf88-4584-a10b-045ee7f992c0" />
+    <Column Name="FONO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d6953809-a923-4cd9-b326-3740fdce9b0e" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ced93953-680d-4dc0-a7f8-66e5270ce0d3" />
+    <Column Name="DIRECCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5ecfff1e-6e4f-4ddf-8a63-ac9f63f752a2" />
+    <Column Name="COMUNA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7b425882-e7ac-44c0-bc6d-a70fd40014b2" />
+    <Column Name="PROVINCIA" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="98ee0eb4-8093-41fc-a7a4-adec177ae51c" />
+    <Column Name="REGION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="221f83ce-cf44-4b40-8378-1343cdb91949" />
+  </Type>
+  <Type Name="MISPRODUCTOSNOMBREResult" ed:Guid="55426507-a7ee-4a39-b9f0-d46339e84a30">
+    <Column Name="&quot;cod_stock&quot;" Member="CodStock" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="8a261a92-d356-4aeb-869d-e25a94f3ab3f" />
+    <Column Name="&quot;cod_producto&quot;" Member="CodProducto" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="54f17a26-04e1-4fa7-9f70-24fe7903ac31" />
+    <Column Name="PRODUCTO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="df797711-d5e1-402a-9c40-0a1de8e3b914" />
+    <Column Name="&quot;stock&quot;" Member="Stock" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="224b6090-0e43-49de-a94b-764412b26711" />
+  </Type>
+  <Type Name="MISPRODUCTOResult" ed:Guid="d6c734d9-f5c9-480a-9c68-1bd00088c6ca">
+    <Column Name="&quot;cod_producto&quot;" Member="CodProducto" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2a314da9-877f-46a0-80d6-e45161d61ce9" />
+    <Column Name="PRODUCTO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="e020fb51-1598-4509-8016-109d7b9b75df" />
+    <Column Name="&quot;stock&quot;" Member="Stock" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1ef7576b-1bda-40af-9d1e-c49e28aebd40" />
+  </Type>
+  <Type Name="BUSCARVALORPRODUCTOResult" ed:Guid="3349300e-5857-479c-baf2-38ea28ca9ead">
+    <Column Name="VALORPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="60232e66-ab2b-4766-9a48-1a05755bdd0b" />
+  </Type>
+  <Type Name="BUSCARPRODUCTOPORCODPEDIDOResult" ed:Guid="deb5130d-c78a-494a-9672-4756bddae17f">
+    <Column Name="PRODUCTO_IDPRODUCTO" Member="PRODUCTOIDPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="530c0373-5b4d-4c42-b1a3-5a1f65f499be" />
+  </Type>
+  <Type Name="SELECTPRODUCTOSNOMBREResult" ed:Guid="aecbd0f7-6c94-4e1a-90e9-5652c63add41">
+    <Column Name="ID" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1aece6a0-4f2c-4698-bc6f-0a369e91c2fc" />
+    <Column Name="NOMBBRE" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="d570d058-67f5-4096-89a7-1278db8945c9" />
+    <Column Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e6cc8be7-77a9-42cc-9f9c-48273764455e" />
+    <Column Name="VALOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c0f71ca7-5869-47cd-af54-c6c557cbf404" />
+  </Type>
+  <Type Name="BUSCARIDPRODUCTORPORRUTResult" ed:Guid="8fc2dc0a-0cf0-4807-b4c1-3dd3778a1d58">
+    <Column Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b51cf6ec-7024-4983-befb-024ef36f4686" />
+  </Type>
+  <Type Name="SELECTUPDATECARROResult" ed:Guid="a90a454b-8a8d-47ac-bb3a-8427fdcd1379">
+    <Column Name="NOMBREPRODUCTO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c44ce1dd-f0b1-4218-9771-9bb369256b8c" />
+    <Column Name="VALORPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6e4b3bac-7185-4c1c-b29f-e73fa8f86850" />
+    <Column Name="CANTIDADPEDIDODETALLEDOC" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c24d180d-7d7c-4815-832b-e29b331badd5" />
+    <Column Name="STOCKPRODUCTOPRODUCTOR" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c9dfa6c7-7c0b-4b98-a34a-a0007f78973d" />
+  </Type>
+  <Type Name="BUSCARBOLETAPORIDResult" ed:Guid="e867d8d7-3f0b-46e2-bf25-661eb1e3097e">
+    <Column Name="IDDOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="25882240-3675-4083-bead-2a4366f13461" />
+    <Column Name="VALORTOTALDOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="287940ae-3aa3-4292-8166-b418900e7fac" />
+    <Column Name="TIPOODOCUMENTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6fac14f6-3318-4b49-a51e-673de293e3c6" />
+    <Column Name="USUARIO_IDUSUARIO" Member="USUARIOIDUSUARIO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3486f94a-529e-41e1-81e9-638fe1bff8f3" />
+    <Column Name="ESTADODOCUMENTO" Type="System.String" DbType="CHAR(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="6580efe4-d0b3-4727-b44d-9eb33a398953" />
+  </Type>
+  <Type Name="LISTARPRODUCTOResult" ed:Guid="c7ca7424-4349-4fbb-a89c-67a433c1afac">
+    <Column Name="IDPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="527175a6-25f0-4a7a-aff8-7c5113699c18" />
+    <Column Name="NOMBREPRODUCTO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="62b3cdf6-ad1c-4ee3-90ed-3ac19c5e843b" />
+    <Column Name="DESCRIPCIONPRODUCTO" Type="System.String" DbType="VARCHAR2(4000 CHAR) NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="94e1e5a5-6e40-47df-8d1c-32c2a20b05ab" />
+    <Column Name="VALORPRODUCTO" Type="System.Decimal" DbType="NUMBER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="19d97a34-d6c1-4ee4-aefb-598e72e96e69" />
+    <Column Name="ESTADOPRODUCTO" Type="System.String" DbType="CHAR(2000) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="8519c2e2-00ab-4dc7-bb02-e392d22e2670" />
+  </Type>
+  <Function Name="PORTAFOLIO.INSERTDETALLEDOC" Method="INSERTDETALLEDOC" ed:Guid="4fd3782e-94db-4b3a-b512-8e8060fab4a0">
+    <Parameter Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="VALORPROD" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="SUBTOTAL" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="DOCUMENTO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="PRODUCTO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="USUARIO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.INSERTUSUARIO" Method="INSERTUSUARIO" ed:Guid="39fcb1ee-0f45-4259-b26a-f745c1fae3dd">
+    <Parameter Name="RUT" Type="System.String" DbType="VARCHAR2(15 CHAR)" FixedLength="true" MaxLength="15" />
+    <Parameter Name="NOMBRE" Type="System.String" DbType="VARCHAR2(50 CHAR)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="APELLIDOPA" Type="System.String" DbType="VARCHAR2(50 CHAR)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="APELLIDOMA" Type="System.String" DbType="VARCHAR2(50 CHAR)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="CORREO" Type="System.String" DbType="VARCHAR2(150 CHAR)" FixedLength="true" MaxLength="150" />
+    <Parameter Name="TELEFONO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="CLAVE" Type="System.String" DbType="VARCHAR2(25 CHAR)" FixedLength="true" MaxLength="25" />
+    <Parameter Name="TIPO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="ESTADO" Type="System.String" DbType="CHAR(1)" FixedLength="true" MaxLength="1" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.INSERTDOCUMENTO" Method="INSERTDOCUMENTO" ed:Guid="e195922b-0ca5-44d8-9a63-0f40299f44ea">
+    <Parameter Name="VALOR" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="FECHA" Type="System.DateTime" DbType="DATE" />
+    <Parameter Name="TIPO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="USUARIO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="ESTADO" Type="System.String" DbType="CHAR(1)" FixedLength="true" MaxLength="1" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.INSERTPRODUCTOPRODUCTOR" Method="INSERTPRODUCTOPRODUCTOR" ed:Guid="1ab8247b-ea87-4ec1-8d47-ba14fcfd8cf9">
+    <Parameter Name="STOCK" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="ESTADO" Type="System.String" DbType="CHAR(1)" FixedLength="true" MaxLength="1" />
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="IDPRODUCTO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR" Method="SELECTVENDEDOR" ed:Guid="fc6d3f15-b168-4c78-9c9a-da9d6546a454">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO" Method="SELECTUSUARIO" ed:Guid="6d60917a-1dd9-4c12-b557-c90505f89f11">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.INSERTUBICACION" Method="INSERTUBICACION" ed:Guid="e0675548-ac24-4ab9-bcfc-80e13d56a444">
+    <Parameter Name="NOMBRE" Type="System.String" DbType="VARCHAR2(25 CHAR)" FixedLength="true" MaxLength="25" />
+    <Parameter Name="DESCRIPCION" Type="System.String" DbType="VARCHAR2(250 CHAR)" FixedLength="true" MaxLength="250" />
+    <Parameter Name="DIRECCION" Type="System.String" DbType="VARCHAR2(250 CHAR)" FixedLength="true" MaxLength="250" />
+    <Parameter Name="ESTADO" Type="System.String" DbType="CHAR(1)" FixedLength="true" MaxLength="1" />
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Parameter Name="IDCOMUNA" Type="System.Decimal" DbType="NUMBER(38)" FixedLength="true" MaxLength="22" Precision="38" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.FINDBY" Method="FINDBY" ed:Guid="020fd62f-4767-4f2b-8d22-b411a9b8424c">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR" Method="BUSCAR" ed:Guid="c52f418e-6a62-444d-9af1-95404eddf43e">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL" Method="SELECTFINAL" ed:Guid="c10b6684-3915-4dd1-95dd-cf10e6bca9bb">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.CUSTOM_AUTH" Method="CUSTOMAUTH" IsComposable="true" ed:Guid="24230b74-ca17-4fbc-b37d-1f54ca64dcf6">
+    <Parameter Name="P_USERNAME" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="P_PASSWORD" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="PORTAFOLIO.CUSTOM_HASH" Method="CUSTOMHASH" IsComposable="true" ed:Guid="ab9e7a6d-6fe4-4c2b-98ac-d7117b3a6648">
+    <Parameter Name="P_USERNAME" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="P_PASSWORD" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="PORTAFOLIO.FN_LOGIN" Method="FNLOGIN" IsComposable="true" ed:Guid="94a35389-ada2-42cd-8d53-06e310a74d66">
+    <Parameter Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="CLAVE" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Return Type="System.Decimal" />
+  </Function>
+  <Function Name="PORTAFOLIO.FN_BUSCARVALORPRODUCTO" Method="FNBUSCARVALORPRODUCTO" IsComposable="true" ed:Guid="6bc4cb70-bf6d-48df-8436-bea098c3ec11">
+    <Parameter Name="IDPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Decimal" />
+  </Function>
+  <Function Name="PORTAFOLIO.FN_BUSCARIDCARRITO" Method="FNBUSCARIDCARRITO" IsComposable="true" ed:Guid="4d6d7116-56dd-4627-98b6-0261d4c56646">
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Decimal" />
+  </Function>
+  <Function Name="PORTAFOLIO.FN_BUSCARIDPRODUCTORPORRUT" Method="FNBUSCARIDPRODUCTORPORRUT" IsComposable="true" ed:Guid="90bc4711-e215-40a3-b5a5-a40e53a17eec">
+    <Parameter Name="RUTPROD" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Return Type="System.Decimal" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR.SELECTPRODUCTORES" Method="SELECTPRODUCTORE" ed:Guid="acb37eb9-87ae-45cd-ae35-0549bd788bf5">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR.SELETBOLETAS" Method="SELETBOLETA" ed:Guid="116e2069-236a-4740-9eff-a9b823ab4c5d">
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR.SELECTPRODUCTORPORPRODUCTO" Method="SELECTPRODUCTORPORPRODUCTO" ed:Guid="4ba97356-ba4f-49ea-9950-43650fa74bb0">
+    <Parameter Name="IDPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR.SELECTPRODUCTOPORPRODUCTOR" Method="SELECTPRODUCTOPORPRODUCTOR" ed:Guid="43662efa-2812-4f7c-9104-802ab6bfef87">
+    <Parameter Name="IDPRODUCTOR" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR.SELECTPRODUCTOS" Method="SELECTPRODUCTO" ed:Guid="eecd52f6-b11d-47c0-ac5d-12735c5a87da">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTVENDEDOR.SELECTDETALLEBOLETA" Method="SELECTDETALLEBOLETA" ed:Guid="25a38222-5dca-4784-8336-032ef5e18aaa">
+    <Parameter Name="IDBOLETA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO.SELECTPRODUCTOPORPRODUCTOR" Method="SELECTPRODUCTOPORPRODUCTOR1" ed:Guid="4840870d-27b8-44c4-bf00-5851e0f5a195">
+    <Parameter Name="IDPRODUCTOR" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO.SELECTPRODUCTORES" Method="SELECTPRODUCTORE1" ed:Guid="4a1900c7-3478-4a88-9f81-414a02a32e0e">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO.SELECTPRODUCTOS" Method="SELECTPRODUCTO1" ed:Guid="7b091329-9d03-475c-8c2e-4bac64f6a798">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO.SELECTPRODUCTORPORPRODUCTO" Method="SELECTPRODUCTORPORPRODUCTO1" ed:Guid="86fe04ff-9d6e-4958-b227-a59c03eaa687">
+    <Parameter Name="IDPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO.SELECTDETALLEBOLETA" Method="SELECTDETALLEBOLETA1" ed:Guid="0e5b8a00-83a2-4fee-886f-879048adcc9b">
+    <Parameter Name="IDBOLETA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTUSUARIO.SELETBOLETAS" Method="SELETBOLETA1" ed:Guid="fd0ecca3-7c94-4062-8c0c-31398e6743ca">
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.STOCKSUMAR" Method="STOCKSUMAR" ed:Guid="42e23a86-81ad-4834-92c3-43cf0827980e">
+    <Parameter Name="CODSTOCK" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.STOCKELIMINAR" Method="STOCKELIMINAR" ed:Guid="b1e46f4c-c476-4cea-99ab-d86497fb6b8f">
+    <Parameter Name="CODSTOCK" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUSUARIOSADMREGION" Method="SELECTUSUARIOSADMREGION" ed:Guid="12c1b2c8-5a9e-4c47-971f-433bbe467f59">
+    <Parameter Name="REGIO" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTOSADMCOD" Method="SELECTPRODUCTOSADMCOD" ed:Guid="3a558b4e-1678-4ce8-8900-739f61caefd1">
+    <Parameter Name="CODPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTPRODUCTOSADMCODResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORPORPRODCOM" Method="SELECTPRODUCTORPORPRODCOM" ed:Guid="aa134b3c-5d99-42b8-a179-27e7dee1ce4c">
+    <Parameter Name="COMM" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="COOODDPRODDD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTPRODUCTORPORPRODCOMResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTAGREGARALCARRO" Method="SELECTAGREGARALCARRO" ed:Guid="764bf5af-a34f-41cc-b162-da2e60733b6d">
+    <Parameter Name="USSRUTT" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="CODDPRODD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTAGREGARALCARROResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUSUARIOSADMCOMUNA" Method="SELECTUSUARIOSADMCOMUNA" ed:Guid="2b532876-5a54-43e3-b501-0b864a62a8f3">
+    <Parameter Name="COMU" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUSUARIOSADM" Method="SELECTUSUARIOSADM" ed:Guid="51fe7859-caa1-43b7-998e-a73e811d3775">
+    <ElementType Type="SELECTUSUARIOSADMResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUSUARIOBYRUT" Method="SELECTUSUARIOBYRUT" ed:Guid="da19fa60-bcea-47c3-9d15-0b7a6b75f78a">
+    <Parameter Name="USRUT" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOBYRUTResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTOSADMNOMBRE" Method="SELECTPRODUCTOSADMNOMBRE" ed:Guid="8a467e15-b91e-422d-b38d-e9ae5e2128c0">
+    <Parameter Name="NOM" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTPRODUCTOSADMCODResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTOS" Method="SELECTPRODUCTO2" ed:Guid="7e2bf029-da00-42ff-b487-ebc25b0dd6c4">
+    <ElementType Type="SELECTPRODUCTO2Result" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESREGION" Method="SELECTPRODUCTORESREGION" ed:Guid="2a88a48e-d36e-4e6f-bf6d-1710ebb2a68b">
+    <Parameter Name="REGIO" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTPRODUCTORESREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESADMREGION" Method="SELECTPRODUCTORESADMREGION" ed:Guid="16552708-8a77-4748-b0c9-b8d4d86406ed">
+    <Parameter Name="REGIO" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.BUSCARRUTPORCODPEDIDO" Method="BUSCARRUTPORCODPEDIDO" ed:Guid="1adf6fcc-8ebf-4b23-8cfb-5cd0694c672f">
+    <Parameter Name="CODPEDIDO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="BUSCARRUTPORCODPEDIDOResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.AGREGARALCARRO" Method="AGREGARALCARRO" ed:Guid="cf577f7e-0d3e-4918-bf68-b7eef57cdcc2">
+    <Parameter Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="VALOR" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="IDDOC" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="CODPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="IDPRODUCTOR" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUSUARIOSADMPROVINCIA" Method="SELECTUSUARIOSADMPROVINCIA" ed:Guid="83e775d1-2f09-4070-b492-870ac43a0851">
+    <Parameter Name="PROVI" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTOSADM" Method="SELECTPRODUCTOSADM" ed:Guid="63c0900a-dd51-4be5-b73f-20e566daf760">
+    <ElementType Type="SELECTPRODUCTOSADMCODResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORPORPRODPROV" Method="SELECTPRODUCTORPORPRODPROV" ed:Guid="f2c657d5-1c2a-4102-a938-09f94eb250d7">
+    <Parameter Name="PROVV" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="COOODDPRODDD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTPRODUCTORPORPRODCOMResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESADMPROVINCIA" Method="SELECTPRODUCTORESADMPROVINCIA" ed:Guid="972d87fa-d43e-4057-83b8-358960b77f10">
+    <Parameter Name="PROVI" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESADM" Method="SELECTPRODUCTORESADM" ed:Guid="439cf138-d388-4279-9710-d14bb7d75c6a">
+    <ElementType Type="SELECTUSUARIOSADMResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.LOGIN" Method="LOGIN" ed:Guid="aa2eaef8-cf42-4d36-97f9-fd15927b4e26">
+    <Parameter Name="US" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="PW" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="LOGINResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.IDCODBOLETACARRITODECOMPRA" Method="IDCODBOLETACARRITODECOMPRA" ed:Guid="002ef244-ad7a-4609-9487-c26f3c76aad3">
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="IDCODBOLETACARRITODECOMPRAResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.HISTORIALDECOMPRA" Method="HISTORIALDECOMPRA" ed:Guid="cbabee5a-5f55-4a9f-8fa4-70c70cb9192b">
+    <Parameter Name="IDUS" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="HISTORIALDECOMPRAResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.CARRITORESTAR" Method="CARRITORESTAR" ed:Guid="668d1c93-a4d3-426f-9f6a-11ec00a1a6de">
+    <Parameter Name="CODPEDIDO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.CARRITODECOMPRA" Method="CARRITODECOMPRA" ed:Guid="f5609cbd-f0e9-4045-a839-114e0765242c">
+    <Parameter Name="CODBOLETA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="CARRITODECOMPRAResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUSUARIOSADMRUT" Method="SELECTUSUARIOSADMRUT" ed:Guid="bc5473b8-f318-48c6-811b-d65272a1f2ff">
+    <Parameter Name="RUTUS" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.STOCKRESTAR" Method="STOCKRESTAR" ed:Guid="bdf39a92-96d3-4485-91f5-a6ed0815c231">
+    <Parameter Name="CODSTOCK" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORPORPRODUCTO" Method="SELECTPRODUCTORPORPRODUCTO2" ed:Guid="b74bb615-2c77-4b4a-865f-ee531eb525ea">
+    <Parameter Name="COOODDPRODDD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTPRODUCTORPORPRODCOMResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESNOMBRE" Method="SELECTPRODUCTORESNOMBRE" ed:Guid="f6fcc824-8a86-4729-aa17-55b7be7a3a31">
+    <Parameter Name="NOMPRO" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTPRODUCTORESNOMBREResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESADMRUT" Method="SELECTPRODUCTORESADMRUT" ed:Guid="32c58f4b-54f1-4932-b303-5feda70a9c80">
+    <Parameter Name="RUTUS" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORES" Method="SELECTPRODUCTORE2" ed:Guid="8c44e254-507f-46ee-85ce-7cb8f62aa890">
+    <ElementType Type="SELECTUSUARIOBYRUTResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.MISPRODUCTOSNOMBRE" Method="MISPRODUCTOSNOMBRE" ed:Guid="2e7067f6-7566-415e-a403-90b3a4c1bc8b">
+    <Parameter Name="NOMP" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="IDUSUA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="MISPRODUCTOSNOMBREResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.MISPRODUCTOS" Method="MISPRODUCTO" ed:Guid="d68ec575-7f6f-4081-a687-2138702b47c9">
+    <Parameter Name="RUUTT" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="MISPRODUCTOResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.CARRITOSUMAR" Method="CARRITOSUMAR" ed:Guid="e5bfd2b2-09e5-4c72-9888-8edf63980d7a">
+    <Parameter Name="CODPEDIDO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="CANTIDAD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.BUSCARVALORPRODUCTO" Method="BUSCARVALORPRODUCTO" ed:Guid="ba089b6c-8a75-436c-a0d9-8eea67313090">
+    <Parameter Name="IDPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="BUSCARVALORPRODUCTOResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.BUSCARPRODUCTOPORCODPEDIDO" Method="BUSCARPRODUCTOPORCODPEDIDO" ed:Guid="16b0284f-3296-4c6d-ba38-f04448a2614e">
+    <Parameter Name="CODPEDIDO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="BUSCARPRODUCTOPORCODPEDIDOResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORPORPRODREG" Method="SELECTPRODUCTORPORPRODREG" ed:Guid="47bf876e-f1bc-4011-ad66-e487549b9d12">
+    <Parameter Name="REGG" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Parameter Name="COOODDPRODDD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTPRODUCTORPORPRODCOMResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESADMCOMUNA" Method="SELECTPRODUCTORESADMCOMUNA" ed:Guid="62219e49-ee6c-4564-b2ab-d828df1e073c">
+    <Parameter Name="COMU" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTUSUARIOSADMREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTOSNOMBRE" Method="SELECTPRODUCTOSNOMBRE" ed:Guid="d2c5b570-6764-4352-8f5d-49e2ae7c59ef">
+    <Parameter Name="NOM" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTPRODUCTOSNOMBREResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESPROVINCIA" Method="SELECTPRODUCTORESPROVINCIA" ed:Guid="bfed782e-b344-4c61-b4ec-c28465c0f452">
+    <Parameter Name="PROVI" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTPRODUCTORESREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTPRODUCTORESCOMUNA" Method="SELECTPRODUCTORESCOMUNA" ed:Guid="71b1684f-77c2-42a8-bcb4-33470b2d6fe9">
+    <Parameter Name="COMU" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="SELECTPRODUCTORESREGIONResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.BUSCARIDPRODUCTORPORRUT" Method="BUSCARIDPRODUCTORPORRUT" ed:Guid="1620d93a-2f0e-4df3-8cb8-9d0e7164e75a">
+    <Parameter Name="RUTPROD" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="BUSCARIDPRODUCTORPORRUTResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.SELECTUPDATECARRO" Method="SELECTUPDATECARRO" ed:Guid="3bdb7ef4-43c3-4a64-a2fc-895fe21c1be0">
+    <Parameter Name="CODPRODUCTO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Parameter Name="IDDOCUMENTO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="SELECTUPDATECARROResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.CARRITOELIMINAR" Method="CARRITOELIMINAR" ed:Guid="9d7eb53d-11e4-4758-9407-6724056452ff">
+    <Parameter Name="CODPEDIDO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.SELECTFINAL.BUSCARIDCARRITO" Method="BUSCARIDCARRITO" ed:Guid="611e3b16-f134-4992-9a8d-757032842dc0">
+    <Parameter Name="IDUS" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="IDCODBOLETACARRITODECOMPRAResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.FINDBY.FINDBOLETABYID" Method="FINDBOLETABYID" ed:Guid="0028dcd0-8eff-4f39-b72f-9235777d5fa5">
+    <Parameter Name="IDBOLETA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.FINDBY.FINDPRODUCTOBYIDPROD" Method="FINDPRODUCTOBYIDPROD" ed:Guid="ede260a0-1c02-4e5b-bac1-cfafa902d2f7">
+    <Parameter Name="IDPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.FINDBY.FINDBYRUT" Method="FINDBYRUT" ed:Guid="675dd1b1-ffae-4681-b0fa-e262c69f9598">
+    <Parameter Name="RUT" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARUSUARIOS" Method="LISTARUSUARIO" ed:Guid="73bfc501-2702-4fb3-a590-35e8401791a9">
+    <ElementType Type="LOGINResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARSTOCKPORPRODUCTOR" Method="LISTARSTOCKPORPRODUCTOR" ed:Guid="fe799a48-0974-4e39-9a51-9c4df7d91196">
+    <Parameter Name="IDPRODUCTOR" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID6" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARBOLETAPORID" Method="BUSCARBOLETAPORID" ed:Guid="75cc402d-56cb-4117-858c-a36d38daa737">
+    <Parameter Name="BOLID" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="BUSCARBOLETAPORIDResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARPRODUCTOS" Method="LISTARPRODUCTO" ed:Guid="8b7fdd73-6632-4b8d-b084-0e008e2cce25">
+    <ElementType Type="LISTARPRODUCTOResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARCOMUNAS" Method="LISTARCOMUNA" ed:Guid="ba553db4-a8e2-43b5-860a-155b80532080">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARBOLETASPORIDUSUARIO" Method="LISTARBOLETASPORIDUSUARIO" ed:Guid="9f7f421c-7148-4565-b2b1-6cf52970e0c4">
+    <Parameter Name="IDUS" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="BUSCARBOLETAPORIDResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARDETALLEPORID" Method="BUSCARDETALLEPORID" ed:Guid="80034a0e-a90e-48b7-9fb6-534cab692b84">
+    <Parameter Name="IDDETBOLETA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID5" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARCOMUNAPORID" Method="BUSCARCOMUNAPORID" ed:Guid="fe10e385-5cab-4aaf-9f72-35ea3f918e53">
+    <Parameter Name="COMUNACOD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARDETALLEDOC" Method="LISTARDETALLEDOC" ed:Guid="400457f4-31bf-44fb-8223-b0c3120579da">
+    <ElementType IdRef="ID5" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARUBICACION" Method="LISTARUBICACION" ed:Guid="94bbf96a-c8db-48d7-87d7-84cdd40dd4ba">
+    <ElementType IdRef="ID4" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARREGIONES" Method="LISTARREGIONE" ed:Guid="36441e29-668b-4f09-912d-0093488c5512">
+    <ElementType IdRef="ID3" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARDETALLEPORBOLETA" Method="LISTARDETALLEPORBOLETA" ed:Guid="c0b61a3a-6aad-4152-b958-5b8c6ef25204">
+    <Parameter Name="IDCODBOLETA" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID5" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARREGIONPORID" Method="BUSCARREGIONPORID" ed:Guid="d3feaf27-ea51-4bf0-8a04-13b46f38bf6f">
+    <Parameter Name="REGIONCOD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID3" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARPRODUCTOPORID" Method="BUSCARPRODUCTOPORID" ed:Guid="da4243b7-9830-425a-b556-a8521e4b28ef">
+    <Parameter Name="CODPROD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType Type="LISTARPRODUCTOResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARSTOCK" Method="LISTARSTOCK" ed:Guid="b7ffef35-6903-4ea0-8085-4f6f0e08664f">
+    <ElementType IdRef="ID6" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARSTOCKPORPRODUCTO" Method="BUSCARSTOCKPORPRODUCTO" ed:Guid="b0d16cd7-e73f-4273-a0f1-b4b38cee5402">
+    <Parameter Name="IDPRODUCT" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID6" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARPROVINCIAPORID" Method="BUSCARPROVINCIAPORID" ed:Guid="4eecdb7d-dd1d-4fca-adab-50f3c87cdc9d">
+    <Parameter Name="PROVINCIACOD" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID2" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARUBICACIONPORUSUARIO" Method="LISTARUBICACIONPORUSUARIO" ed:Guid="570e2afc-157b-4cf2-8de5-3f76563a76b4">
+    <Parameter Name="IDUSUARIO" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID4" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARBOLETAS" Method="LISTARBOLETA" ed:Guid="c7a8195c-822d-4d38-bc24-92841b4f047a">
+    <ElementType Type="BUSCARBOLETAPORIDResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARUSUARIOPORRUT" Method="BUSCARUSUARIOPORRUT" ed:Guid="209a98dc-78c8-453d-8b78-09b24d072456">
+    <Parameter Name="RUTUS" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="LOGINResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.LISTARPROVINCIAS" Method="LISTARPROVINCIA" ed:Guid="21fcacc7-a083-447c-9618-d5f178232c51">
+    <ElementType IdRef="ID2" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARUSUARIOPORID" Method="BUSCARUSUARIOPORID" ed:Guid="87ae49e6-3608-471d-9544-822ffe9e863f">
+    <Parameter Name="IDTUS" Type="System.String" DbType="VARCHAR2(4000 CHAR)" />
+    <ElementType Type="LOGINResult" />
+  </Function>
+  <Function Name="PORTAFOLIO.BUSCAR.BUSCARUBICACIONPORID" Method="BUSCARUBICACIONPORID" ed:Guid="7ed69ba4-550a-45a0-8c15-b8d238413e82">
+    <Parameter Name="CODUBICACION" Type="System.Decimal" DbType="NUMBER" FixedLength="true" MaxLength="22" />
+    <ElementType IdRef="ID4" />
+  </Function>
+</Database>
