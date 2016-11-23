@@ -18,13 +18,13 @@ function validarNombre(evt)
     }
 	else
 	{
-	alert ("Nombre no puede tener números");
+	alert ("Uno de los campos no puede ingresar números.");
     return false;
 	}
 	
 	if(evt == "") 
 	{
-		alert ("Ingrese campo 'Nombre'");
+		alert ("Llene campos vacíos");
 		return false;
 	}	
 }
@@ -154,6 +154,7 @@ function validarBoleta()
 		alert("No puede ingresar el campo 'Rut' vacío.");
 		return false;
 	}
+	validarRut(Rut);
 
 	validarValor(Valor);
 }
@@ -179,7 +180,6 @@ function validarRut(Rut)
         }
 
         if(dv == RUT[1].toLowerCase()){
-            return true;
         }else{            
             alert("El RUT no es válido.");
             return false;
@@ -206,7 +206,7 @@ function validarCuenta()
 	validarNombre(Materno);
 	validarCorreo(Correo);
 
-	if (Number(Contacto)) {alert(Contacto);}
+	if (Number(Contacto)) {}
 	else {
 		alert("Ingrese sólo números (0-9)");
 		return false;
