@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrap">
-        <form id="form1" runat="server">
+        <form id="form1" runat="server" onsubmit="return validarDatos()">
         <div>    
             <h1>Carrito de Compras</h1>
             FILTRAR POR ID:
@@ -27,8 +27,7 @@
                     <asp:CommandField ButtonType="Button" EditText="Sumar" ShowEditButton="True" />
                     <asp:CommandField ShowDeleteButton="True" />
                 </Columns>
-            </asp:GridView>
-    
+            </asp:GridView>    
         </div>
         </form>
 

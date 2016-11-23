@@ -6,10 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
-    <title>PORTAFOLIO</title>    
+    <title>PORTAFOLIO</title>   
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server" method="POST">
+    <form id="form1" runat="server" method="POST" onsubmit="return validarDatos()">
         <h1>Enviar Correo Para Cambiar De Perfil</h1>
         <div>
             <div>
@@ -34,7 +35,7 @@
             <label for="terminos">Seguro que desea enviar este mensaje?</label>
             </div>            
         </div>
-        <asp:Button ID="Button1" runat="server" Text="Enviar" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" onClientClick="return validarMensaje()" Text="Enviar" OnClick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="Volver" OnClick="Button2_Click" />
         <br />
         <br />

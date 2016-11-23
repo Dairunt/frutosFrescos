@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
     <title>PORTAFOLIO</title>
@@ -40,7 +41,7 @@
             </div>
             <br />
             <br />
-            <asp:Button ID="btnAceptar" runat="server" OnClick="Button1_Click" Text="ACEPTAR" Width="107px" />
+            <asp:Button ID="btnAceptar" runat="server" OnClientClick="return validarCuenta()" OnClick="Button1_Click" Text="ACEPTAR" Width="107px" />
             &nbsp;
             <asp:Button ID="btnCancelar" runat="server" Text="CANCELAR" OnClick="Button2_Click" Width="128px" />
     

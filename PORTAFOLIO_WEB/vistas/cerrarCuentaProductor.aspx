@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
     <title>PORTAFOLIO</title>
+
 </head>
 <body>
     <div class="wrap">

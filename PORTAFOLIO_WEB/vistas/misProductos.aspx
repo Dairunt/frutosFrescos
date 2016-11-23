@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
     <title>PORTAFOLIO</title>
@@ -18,7 +19,7 @@
 &nbsp;
         <asp:TextBox ID="txtBuscar" runat="server" Width="195px"></asp:TextBox>
         &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Filtrar" />
+        <asp:Button ID="Button3" runat="server" OnClientClick="return validarNombre()" Text="Filtrar" />
         &nbsp;
         <asp:Button ID="btnVolverP" runat="server" Text="Volver" OnClick="Button2_Click" />
         <br />

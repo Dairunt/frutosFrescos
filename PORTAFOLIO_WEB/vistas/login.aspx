@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
     <title>PORTAFOLIO</title>
@@ -11,7 +12,7 @@
 <body>
     <div class="wrap">
         <form id="form1" runat="server" method="get">
-        <h1>Ingrese a Su Cuentra</h1>
+        <h1>Ingrese a Su Cuenta</h1>
             <asp:Label Text="RUT: " runat="server" />
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <br />
@@ -20,8 +21,8 @@
             <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Ingresar" OnClick="Button1_Click"/>
-            <asp:Button ID="Button2" runat="server" Text="Registrarse" OnClick="Button2_Click" />
+            <asp:Button ID="Button1" runat="server" Text="Ingresar" OnClientClick="return validarRut()" OnClick="Button1_Click"/>
+            <asp:Button ID="Button2" runat="server" Text="Registrarse" OnClientClick="return valiarRut()" OnClick="Button2_Click" />
             <br />
             <br />
             <br />

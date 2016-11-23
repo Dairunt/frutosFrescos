@@ -6,7 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
-    <title>PORTIFOLIO</title>
+    <title>PORTAFOLIO</title>
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -39,7 +40,7 @@
             <asp:Label Text="" runat="server" ID="Label6"/>
             <br />
             <br />
-            <asp:Label Text="Contaseña: " runat="server" />
+            <asp:Label Text="Contraseña: " runat="server" />
             <asp:Label Text="" runat="server" ID="Label7"/>           
             <br />
             <br />
@@ -54,8 +55,7 @@
             &nbsp;
             <asp:Button ID="btnModificarContrasenia" runat="server" Text="Modificar Contraseña" Width="199px" OnClick="Button5_Click" />
             &nbsp;
-            <asp:Button ID="btnModificarDatos" runat="server" OnClick="Button6_Click" Text="Modificar Datos Personales" />
-    
+            <asp:Button ID="btnModificarDatos" runat="server" OnClientClick="return validarCuenta()" OnClick="Button6_Click" Text="Modificar Datos Personales" />
         </div>
         </form>
     </div>

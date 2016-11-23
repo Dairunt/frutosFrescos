@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
     <title>PORTAFOLIO</title>
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
+</script>
 </head>
 <body>
     <div class="wrap">
@@ -18,7 +20,7 @@
             <asp:TextBox ID="TextBox1" runat="server" Width="233px"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="btnAceptar" runat="server" Text="ACEPTAR" OnClick="Button1_Click" />
+            <asp:Button ID="btnAceptar" runat="server" OnClientClick="return validarCierre()" Text="ACEPTAR" OnClick="Button1_Click" />
             &nbsp;
             <asp:Button ID="btnVolverC" runat="server" Text="VOLVER" OnClick="Button3_Click" />
         </form>

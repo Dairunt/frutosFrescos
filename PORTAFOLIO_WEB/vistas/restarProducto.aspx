@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<script type="text/javascript" src="vistas/JS/validarDatos.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="CSS/Style.css" rel="stylesheet" />
     <title>PORTAFOLIO</title>
@@ -29,7 +30,7 @@
         <br />
         <br />
         CANTIDAD DE Kg QUE DESEA RESTAR:&nbsp;
-        <asp:TextBox ID="txtCantidad" runat="server" Width="239px"></asp:TextBox>
+        <asp:TextBox ID="txtCantidad" runat="server" OnClientClick="return validarValor()" Width="239px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnQuitar" runat="server" OnClick="Button1_Click" Text="QUITAR" />
         
