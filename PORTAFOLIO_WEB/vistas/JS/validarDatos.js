@@ -75,39 +75,6 @@ function validarCarrito()
 		return false;
 	}	
 
-function validarProducto()
-{
-	var Nombre, Valor, Productor, Stock;
-	Nombre = document.getElementById("Label1").value;
-	Valor = document.getElementById("Label2").value;
-	Productor = document.getElementById("Label3").value;
-	Stock = document.getElementById("Label5").value;
-
-	validarNombre(Nombre);
-	validarValor(Valor);
-	
-	if(Productor == "")
-	{
-		alert ("Ingrese campo 'Productor'");
-		return false;
-	}	
-	if (Number(Stock))
-	{
-		alert(Stock);
-		return false;
-	}
-	else 
-	{
-		alert("Ingrese sólo números (0-9)");
-		return false;
-	}	
-		if(Stock == "") 
-	{
-		alert ("Ingrese campo 'Stock'");
-		return false;
-	}	
-}
-
 function validarClave()
 {
 	var ClaveActual, ClaveNueva, ClaveConfirmar;
